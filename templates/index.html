@@ -1,11 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+{% load i18n %}
+{% load static %}
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/index.css'  %}">
     <title>CeciliaPT</title>
 </head>
-<body>
-    <h1>Hello {{ request.user }}</h1>
-    <p>This is a p tag</p>
+<body style="background-image: url({% static '/images/header.png' %});">
+    <div class="headerbar">
+        <a>{% trans "Home" %}</a>
+        <a>{% trans "Sobre" %}</a>
+        <a>{% trans "Galeria" %}</a>
+        <a>{% trans "Contacto" %}</a>
+        <a>{% trans "Videos" %}</a>
+        <a id="greet">{% trans "Olá" %} {{ request.user }}</a>
+    </div>
+
 </body>
 </html>
