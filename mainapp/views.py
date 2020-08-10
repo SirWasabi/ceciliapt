@@ -10,3 +10,7 @@ def index(request, *args, **kwargs):
 
 def contact(request, *args, **kwargs):
     return render(request, "contact.html", {})
+
+
+def login(request, *args, **kwargs):
+    return render(request, "login.html", {})

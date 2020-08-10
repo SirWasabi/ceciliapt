@@ -1,33 +1,65 @@
 body {
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: 100% 100%;
+    margin: 0;
+    font-family: Verdana, sans-serif;
 }
 
-.headerbar {
-    position : fixed;
-    top : 0%;
-    width: 100%;
-    height: 30px;
-    padding: 8px 16px;
-}
-
-.headerbar a {
-    left: 100%;
-    padding: 8px 16px;
-    font-family: "Lato", sans-serif;
-    font-size: 15px;
-}
-
-#greet {
-    left: 0%;
-    right: 100%;
-    padding: right;
-}
-
-#headerimg {
+/* Add a black background color to the top navigation */
+.topnav {
     position: fixed;
-    top: 0%;
-    left: 0%;
     width: 100%;
+    background-color: #0077b6;
+    overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+    background-color: #00b4d8;
+    color: white;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+    background-color: #00b4d8;
+    color: white;
+}
+
+.topnav .login{
+    float: right;
+}
+
+.backimg {
+    width: 100%;
+}
+
+section {
+    width:100%;
+    height: 100px;
+}
+
+.footer {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #F5F5F6;
+    color: #77777;
+    text-align: center;
+    padding: 5px 0px;
+}
+
+.footer p {
+    color: #777777;
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
