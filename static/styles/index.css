@@ -1,12 +1,24 @@
 body {
     margin: 0;
     font-family: Verdana, sans-serif;
+    display: block;
+    background-color: #00b4d8;
+    min-width: 800px;
+    width: auto !important;
+}
+
+.wraptocenter {
+    display: block;
+    margin: auto;
+    width: 70%;
 }
 
 /* Add a black background color to the top navigation */
 .topnav {
     position: fixed;
     width: 100%;
+    height: 49px;
+    top: 0;
     background-color: #0077b6;
     overflow: hidden;
 }
@@ -37,13 +49,66 @@ body {
     float: right;
 }
 
-.backimg {
-    width: 100%;
+.frontwrap {
+    height: 105vh;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 100% 100%;
+    background-size: cover;
+}
+
+.wrapper {
+    padding: 28px 0px;
+}
+
+.front {
+    text-align: center;
+    padding: 200px 0px;
+}
+
+.front h1 {
+    font-size: 50px;
+    color: white;
+}
+
+#job {
+    font-size: 25px;
+    letter-spacing: 2px;
+    margin-top: -30px;
+    color: white;
+}
+
+#changebutton {
+    font-size: 18px;
+    color: white;
+    letter-spacing: 4px;
+    border: 1px solid;
+    border-radius: 16px;
+    background-color: #D5003D;
+    border-color: #D5003D;
+    box-shadow: 0px 5px 6px 0px rgba(0, 0, 0, 0.67);
+    border-width: thick;
+}
+
+@keyframes upndown {
+   0% { transform: translateY(0); }
+   100% { transform: translateY(-10px); }
+}
+
+#frontpic {
+    width: 40%;
+    height: 40%;
+}
+
+#frontpic:hover {
+    animation-name: upndown;
+    animation: upndown 1s infinite  alternate;
 }
 
 section {
     width:100%;
-    height: 100px;
+    height: 500px;
+    border: solid;
 }
 
 .footer {

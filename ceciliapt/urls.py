@@ -20,7 +20,6 @@ from mainapp.views import index, contact, login
 
 urlpatterns = [
     path('', index, name='index'),
-    path('contact', contact, name='contact'),
     path('login', login, name='login'),
     path('admin/', admin.site.urls),
 ]

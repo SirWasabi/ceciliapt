@@ -6,40 +6,69 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="{% static 'styles/index.css'  %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>CeciliaPT</title>
 </head>
 <body>
-    <div class="topnav" id="home">
-        <a href="#home"><i class="fa fa-fw fa-home"></i></a>
-        <a href="#about"><i class="fa fa-address-card" aria-hidden="true"></i> {% trans "Sobre" %}</a>
-        <a href="#contact"><i class="fa fa-fw fa-envelope"></i> {% trans "Contacto" %}</a>
-        <a href="#gallery"><i class="fa fa-play-circle-o" aria-hidden="true"></i> {% trans "Galeria" %}</a>
-        <a href="#training"><i class="fa fa-play-circle-o" aria-hidden="true"></i> {% trans "Treinos" %}</a>
-        <a class="login" href="{% url 'login' %}"><i class="fa fa-user-circle-o" aria-hidden="true"></i>
-            {% if request.user.is_authenticated %}
-                {% trans "Olá" %} {{ request.user }}
-            {% else %}
-                {% trans "Log-in" %}
-            {% endif %}
-        </a>
+    <nav class="topnav">
+            <a id="homebutton" href="#home"><i class="fa fa-fw fa-home"></i></a>
+            <a id="aboutbutton" href="#about"><i class="fa fa-address-card" aria-hidden="true"></i> {% trans "Sobre" %}</a>
+            <a id="contactbutton" href="#contact"><i class="fa fa-fw fa-envelope"></i> {% trans "Contacto" %}</a>
+            <a id="gallerybutton" href="#gallery"><i class="fa fa-play-circle-o" aria-hidden="true"></i> {% trans "Galeria" %}</a>
+            <a id="trainingbutton" href="#training"><i class="fa fa-play-circle-o" aria-hidden="true"></i> {% trans "Treinos" %}</a>
+            <a class="login" href="{% url 'login' %}"><i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                {% if request.user.is_authenticated %}
+                    {% trans "Conta" %}
+                {% else %}
+                    {% trans "Log-in" %}
+                {% endif %}
+            </a>
+     </nav>
+    <div class="wraptocenter">
+        <div class="frontwrap">
+            <div class="wrapper" id="home">
+                <div class="front">
+                    <img id="frontpic" src="{% static 'images/cecilia-circular.png' %}">
+                    <h1>Maria Cecília Santos</h1>
+                    <p id="job">Personal trainer | Coach</p>
+                    <a id="changebutton">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Quero mudar a minha vida&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                </div>
+            </div>
+        </div>
+        <section id="about">
+            <h2>Aqui estou eu</h2>
+
+
+        </section>
+        <section id="contact">
+            <div>
+                <div>
+                    <h3>Entre em contacto comigo!</h3>
+                </div>
+                <div>
+                    <span class="elementdivider"></span>
+                </div>
+                <div>
+                    <ul>
+                        <li>
+                            <span><i class="fas fa-phone"></i></span>
+                            <span>+351 915 211 079</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </section>
+        <section id="gallery">
+
+        </section>
+        <section id="training">
+
+        </section>
     </div>
-    <img class="backimg" src="static/images/header.png">
-    <section id="about">
-
-    </section>
-    <section id="contact">
-
-    </section>
-    <section id="gallery">
-
-    </section>
-    <section id="training">
-
-    </section>
-
     <div class="footer">
         <p>COPYRIGHT 2020 - MARIA CECÍLIA SANTOS - PERSONAL TRAINER</p>
     </div>
-
 </body>
+<script src="{% static 'scripts/script.js' %}"></script>
 </html>
