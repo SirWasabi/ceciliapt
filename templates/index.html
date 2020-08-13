@@ -1,74 +1,140 @@
 <!DOCTYPE html>
 {% load i18n %}
 {% load static %}
-<html lang="pt">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="{% static 'styles/index.css'  %}">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hello Bulma!</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+    <link rel="stylesheet" href="{% static 'styles/index.css' %}">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <title>CeciliaPT</title>
 </head>
 <body>
-    <nav class="topnav">
-            <a id="homebutton" href="#home"><i class="fa fa-fw fa-home"></i></a>
-            <a id="aboutbutton" href="#about"><i class="fa fa-address-card" aria-hidden="true"></i> {% trans "Sobre" %}</a>
-            <a id="contactbutton" href="#contact"><i class="fa fa-fw fa-envelope"></i> {% trans "Contacto" %}</a>
-            <a id="gallerybutton" href="#gallery"><i class="fa fa-play-circle-o" aria-hidden="true"></i> {% trans "Galeria" %}</a>
-            <a id="trainingbutton" href="#training"><i class="fa fa-play-circle-o" aria-hidden="true"></i> {% trans "Treinos" %}</a>
-            <a class="login" href="{% url 'login' %}"><i class="fa fa-user-circle-o" aria-hidden="true"></i>
-                {% if request.user.is_authenticated %}
-                    {% trans "Conta" %}
-                {% else %}
-                    {% trans "Log-in" %}
-                {% endif %}
-            </a>
-     </nav>
-    <div class="wraptocenter">
-        <div class="frontwrap">
-            <div class="wrapper" id="home">
-                <div class="front">
-                    <img id="frontpic" src="{% static 'images/cecilia-circular.png' %}">
-                    <h1>Maria Cecília Santos</h1>
-                    <p id="job">Personal trainer | Coach</p>
-                    <a id="changebutton">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Quero mudar a minha vida&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
-                </div>
+
+<nav class="navbar is-spaced has-text-weight-light is-fixed-top" id="navbar">
+    <div class="container">
+        <div class="navbar-brand">
+            <img src="{% static 'images/logo.png'  %}" alt="Logo" id="logo">
+            <span class="navbar-burger burger" data-target="navbarMenuHeroC">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+        </div>
+        <div id="navbarMenuHeroC" class="navbar-menu">
+            <div class="navbar-end" id="navbarend">
+                <a class="navbar-item" href="#home" id="homebutton">
+                    Home
+                </a>
+                <a class="navbar-item" href="#about" id="aboutbutton">
+                    About
+                </a>
+                <a class="navbar-item" href="#contact">
+                    Contact
+                </a>
+                <a class="navbar-item" href="#gallery">
+                    Gallery
+                </a>
+                <span class="navbar-item">
+              <a class="button is-info is-inverted" href="#bookings">
+                <span>Bookings</span>
+              </a>
+            </span>
             </div>
         </div>
-        <section id="about">
-            <h2>Aqui estou eu</h2>
-
-
-        </section>
-        <section id="contact">
+    </div>
+</nav>
+<section class="hero is-info is-fullheight" id="home">
+    <div class="hero-head"></div>
+    <div class="hero-body">
+        <div class="container has-text-centered">
+            <figure class="title image container" id="indeximg">
+                <img class="is-rounded" src="{% static 'images/cecilia-circular.png'  %}">
+            </figure>
+            <h1 class="title" id="titlename">
+                Maria Cecília Santos
+            </h1>
+            <h2 class="subtitle" id="subtitlejob">
+                Personal Trainer | Coach
+            </h2>
+            <a class="button is-info -is-inverted" id="trainbutton" href="#bookings">LETS TRAIN TOGETHER</a>
+        </div>
+    </div>
+</section>
+<section class="hero is-fullheight" id="about">
+    <div class="container">
+        <div class="hero-body">
+            <div class="container">
+                <h1 class="title" data-aos="zoom-out-up" data-aos-duration="1500">Aqui estou eu</h1>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="hero is-fullheight" id="contact">
+    <div class="hero-body">
+        <div class="container">
             <div>
                 <div>
-                    <h3>Entre em contacto comigo!</h3>
+                    <h1 class="title">Entre em contacto comigo!</h1>
                 </div>
-                <div>
-                    <span class="elementdivider"></span>
-                </div>
-                <div>
-                    <ul>
+                <div class="contacts">
+                    <ul class="contactlist">
                         <li>
-                            <span><i class="fas fa-phone"></i></span>
-                            <span>+351 915 211 079</span>
+                            <h2><i class="fa fa-phone" aria-hidden="true"></i>&nbsp;|&nbsp;&nbsp;+351 915 211 079</h2>
+                        </li>
+                        <li>
+                            <span><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;|&nbsp;&nbsp;macissa_7@yahoo.com.br</span>
+                        </li>
+                        <li>
+                                    <span>
+                                        <a class="icon-block" href="https://www.facebook.com/macissapt">
+                                            <i class="fa fa-facebook" id="fb" aria-hidden="true"></i>
+                                        </a>
+                                        <a class="icon-block" href="https://www.instagram.com/macissapt/">
+                                            <i class="fa fa-instagram" id="ig" aria-hidden="true"></i>
+                                        </a>
+                                        <a class="icon-block" href="https://t.me/ceciliaasuaptonline">
+                                            <i class="fa fa-telegram" id="tg" aria-hidden="true"></i>
+                                        </a>
+                                        <a class="icon-block"
+                                           href="https://www.youtube.com/mariaceciliasantospersonaltrainer">
+                                            <i class="fa fa-youtube-play" id="yt" aria-hidden="true"></i>
+                                        </a>
+                                    </span>
                         </li>
                     </ul>
                 </div>
             </div>
-
-        </section>
-        <section id="gallery">
-
-        </section>
-        <section id="training">
-
-        </section>
+        </div>
     </div>
-    <div class="footer">
-        <p>COPYRIGHT 2020 - MARIA CECÍLIA SANTOS - PERSONAL TRAINER</p>
+</section>
+<section class="hero is-fullheight" id="gallery">
+    <div class="hero-body">
+        <div class="container">
+            <h1 class="title">Galeria</h1>
+            <div class="tabs is-centered">
+                <ul>
+                    <li class="is-active"><a>Pictures</a></li>
+                    <li><a>Videos</a></li>
+                </ul>
+            </div>
+        </div>
     </div>
+</section>
+<section class="hero is-fullheight" id="bookings">
+    <div class="hero-body">
+        <div class="container">
+            <h1 class="title">Treinos</h1>
+        </div>
+    </div>
+</section>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+<script type="text/javascript" src="{% static 'scripts/script.js' %}"></script>
 </body>
-<script src="{% static 'scripts/script.js' %}"></script>
 </html>

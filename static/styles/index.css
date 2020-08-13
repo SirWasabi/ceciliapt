@@ -1,130 +1,60 @@
-body {
-    margin: 0;
-    font-family: Verdana, sans-serif;
-    display: block;
-    background-color: #00b4d8;
-    min-width: 800px;
-    width: auto !important;
-}
-
-.wraptocenter {
-    display: block;
-    margin: auto;
-    width: 70%;
-}
-
-/* Add a black background color to the top navigation */
-.topnav {
-    position: fixed;
-    width: 100%;
-    height: 49px;
-    top: 0;
-    background-color: #0077b6;
-    overflow: hidden;
-}
-
-/* Style the links inside the navigation bar */
-.topnav a {
-    float: left;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-}
-
-/* Change the color of links on hover */
-.topnav a:hover {
-    background-color: #00b4d8;
+html {
+    scroll-behavior: smooth;
     color: white;
 }
 
-/* Add a color to the active/current link */
-.topnav a.active {
-    background-color: #00b4d8;
-    color: white;
+#navbar {
+    background-color: transparent;
+    background-image: none;
 }
 
-.topnav .login{
-    float: right;
+#navbarend {
+    background-color: hsl(0, 0%, 96%);
+    padding: 0px 10px;
+    background-image: none;
+    border-radius: 60px;
 }
 
-.frontwrap {
-    height: 105vh;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: 100% 100%;
-    background-size: cover;
+#logo {
+    width: 120px;
+    height: 60px;
 }
 
-.wrapper {
-    padding: 28px 0px;
+#home {
+    background: url("/static/images/bg2.jpg") no-repeat fixed;
+    background-size: 100% 100%;
 }
 
-.front {
-    text-align: center;
-    padding: 200px 0px;
-}
-
-.front h1 {
-    font-size: 50px;
-    color: white;
-}
-
-#job {
-    font-size: 25px;
+#titlename {
     letter-spacing: 2px;
-    margin-top: -30px;
-    color: white;
+    font-size: 50px;
 }
 
-#changebutton {
-    font-size: 18px;
-    color: white;
-    letter-spacing: 4px;
-    border: 1px solid;
-    border-radius: 16px;
-    background-color: #D5003D;
-    border-color: #D5003D;
-    box-shadow: 0px 5px 6px 0px rgba(0, 0, 0, 0.67);
-    border-width: thick;
+#subtitlejob {
+    letter-spacing: 6px;
 }
 
-@keyframes upndown {
-   0% { transform: translateY(0); }
-   100% { transform: translateY(-10px); }
+#subtitlelink {
+    letter-spacing: 6px;
+    color: hsl(0, 0%, 21%);
+    background-color: hsl(0, 0%, 96%);
+    font-size: 30px;
+    border: solid;
+    border-color: hsl(0, 0%, 96%);
+    border-radius: 50px;
+    margin: 0px 150px 0px 150px;
+    text-transform: uppercase;
 }
 
-#frontpic {
-    width: 40%;
-    height: 40%;
+#trainbutton {
+    padding: 0px 50px;
 }
 
-#frontpic:hover {
-    animation-name: upndown;
-    animation: upndown 1s infinite  alternate;
+#indeximg{
+    width: 300px;
+    height: 300px;
 }
 
 section {
-    width:100%;
-    height: 500px;
-    border: solid;
-}
-
-.footer {
-    position: relative;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: #F5F5F6;
-    color: #77777;
-    text-align: center;
-    padding: 5px 0px;
-}
-
-.footer p {
-    color: #777777;
-    font-size: 13px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
+    background-color: hsl(0, 0%, 96%);
 }
