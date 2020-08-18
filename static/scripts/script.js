@@ -13,6 +13,10 @@ $(document).ready(function() {
         $('#navbarend').on("click", function () {
             $('.navbar-burger.burger.is-active').click();
         });
+
+        $('#bookingsbutton').removeClass('button');
+
+        $('.columns').removeAttr( 'style' );
     }
 
   // Check for click events on the navbar burger icon
@@ -22,17 +26,31 @@ $(document).ready(function() {
       $(".navbar-menu").toggleClass("is-active");
   });
 
+  $('#pictures').click(function() {
+  if(!$(this).hasClass('is-active')) {
+        $(this).toggleClass("is-active");
+        $('#videos').removeClass("is-active");
+    }
+  });
+
+  $('#videos').click(function() {
+    if(!$(this).hasClass('is-active')) {
+        $(this).toggleClass("is-active");
+        $('#pictures').removeClass("is-active");
+    }
+  });
+
 var lastScrollTop = 0;
 
 $(window).on('scroll', function() {
     var st = window.pageYOffset || document.documentElement.scrollTop;
     if (st > lastScrollTop) {
-        $('#navbar').css({'opacity': '0', 'transition': 'opacity 0.5s ease-out'});
-        if($('#navbar').css('opacity') == 0) {
-            $('#navbar').css('visibility', 'hidden');
+        $('.navbar').css({'opacity': '0', 'transition': 'opacity 0.5s ease-out'});
+        if($('.navbar').css('opacity') == 0) {
+            $('.navbar').css('visibility', 'hidden');
         }
     } else {
-        $('#navbar').css({'visibility': 'visible', 'opacity': '1', 'transition': 'opacity 0.5s ease-in'});
+        $('.navbar').css({'visibility': 'visible', 'opacity': '1', 'transition': 'opacity 0.5s ease-in'});
     }
     lastScrollTop = st <= 0 ? 0 : st;
 });

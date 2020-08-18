@@ -4,32 +4,31 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1.0, user-scalable=no">
     <title>Cecilia</title>
     <link rel="shortcut icon" type="image/x-icon" href="{% static 'images/favico.ico' %}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
     <link rel="stylesheet" href="{% static 'styles/index.css' %}">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Mono">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
 
-<nav class="navbar is-spaced has-text-weight-light is-fixed-top" id="navbar">
+<nav class="navbar is-spaced has-text-weight-semibold is-fixed-top">
     <div class="container">
         <div class="navbar-brand">
-            <img src="{% static 'images/logo.png'  %}" alt="Logo" id="logo">
-            <span class="navbar-burger burger" data-target="navbarMenuHeroC">
-            <span></span>
-            <span></span>
-            <span></span>
-          </span>
+            <a href="#home"> <img src="{% static 'images/logowhite.png'  %}" width="120" height="30" alt="Logo"
+                                  id="logo"></a>
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
         </div>
         <div id="navbarMenuHeroC" class="navbar-menu">
             <div class="navbar-end" id="navbarend">
-                <a class="navbar-item" href="#home" id="homebutton">
-                    Home
-                </a>
                 <a class="navbar-item" href="#about" id="aboutbutton">
                     About
                 </a>
@@ -39,103 +38,245 @@
                 <a class="navbar-item" href="#gallery">
                     Gallery
                 </a>
+                <a class="navbar-item" href="#reviews">
+                    Reviews
+                </a>
                 <span class="navbar-item">
-              <a class="button is-info is-inverted" href="#bookings">
-                <span>Bookings</span>
-              </a>
+                <a class="button is-info is-inverted" id="bookingsbutton" href="#bookings">
+                    Bookings
+                </a>
             </span>
             </div>
         </div>
     </div>
 </nav>
+
 <section class="hero is-info is-fullheight" id="home">
-    <div class="hero-head"></div>
     <div class="hero-body">
         <div class="container has-text-centered">
-            <figure class="title image container" id="indeximg">
-                <img class="is-rounded" src="{% static 'images/cecilia-circular.png'  %}">
-            </figure>
-            <h1 class="title" id="titlename">
-                Maria Cecília Santos
+            <a> <img src="{% static 'images/cecilia-circular.png'  %}"></a>
+
+            <h1 class="maintitle title is-unselectable">
+                <span>Personal Trainer</span>
+                <span> | Coach</span>
             </h1>
-            <h2 class="subtitle" id="subtitlejob">
-                Personal Trainer | Coach
+            <h2 class="subtitle is-unselectable" id="subtitlejob">
+                Maria Cecília Santos
             </h2>
-            <a class="button is-info -is-inverted" id="trainbutton" href="#bookings">LETS TRAIN TOGETHER</a>
+            <a class="button is-info -is-inverted is-unselectable" id="trainbutton" href="#bookings">LETS TRAIN
+                TOGETHER</a>
         </div>
     </div>
 </section>
-<section class="hero is-fullheight" id="about">
 
-        <div class="hero-body">
-            <div class="container">
-                <h1 class="title" data-aos="zoom-out-up" data-aos-duration="1500">Aqui estou eu</h1>
-            </div>
+<section class="hero is-large" id="about">
+    <div class="hero-head mt-6">
+        <div class="container has-text-centered" data-aos="zoom-out-up" data-aos-duration="1500">
+            <h1 class="title is-1">About</h1>
+            <a href="https://www.superprof.pt/personal-trainer-licenciada-com-anos-experiencia-treinos-personalizados-line.html"><img src="https://cdn.superprof.com/style/images/logo_sp_pinkV3.svg"></a>
+            <p class="subtitle mt-6">
+                Licensed personal trainer with over 15 years of experience.
+            </p>
+            <p class="subtitle mt-3">
+                In-person and online personalized trainings.
+            </p>
         </div>
-
-</section>
-<section class="hero is-fullheight" id="contact">
-    <div class="hero-body" data-aos="zoom-out-up" data-aos-duration="1500">
-        <div class="container">
-            <div>
-                <div>
-                    <h1 class="title">Entre em contacto comigo!</h1>
+        <div class="hero-body py-6 has-text-centered is-centered">
+            <div class="tile is-ancestor" >
+                <div class="tile is-parent">
+                    <article class="tile is-child box" data-aos="zoom-out-up" data-aos-duration="1500">
+                        <p class="title">Personal Training / Fitness Coaching</p>
+                    </article>
                 </div>
-                <div class="contacts">
-                    <ul class="contactlist">
-                        <li>
-                            <h2><i class="fa fa-phone" aria-hidden="true"></i>&nbsp;|&nbsp;&nbsp;+351 915 211 079</h2>
-                        </li>
-                        <li>
-                            <span><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;|&nbsp;&nbsp;macissa_7@yahoo.com.br</span>
-                        </li>
-                        <li>
-                                    <span>
-                                        <a class="icon-block" href="https://www.facebook.com/macissapt">
-                                            <i class="fa fa-facebook" id="fb" aria-hidden="true"></i>
-                                        </a>
-                                        <a class="icon-block" href="https://www.instagram.com/macissapt/">
-                                            <i class="fa fa-instagram" id="ig" aria-hidden="true"></i>
-                                        </a>
-                                        <a class="icon-block" href="https://t.me/ceciliaasuaptonline">
-                                            <i class="fa fa-telegram" id="tg" aria-hidden="true"></i>
-                                        </a>
-                                        <a class="icon-block"
-                                           href="https://www.youtube.com/mariaceciliasantospersonaltrainer">
-                                            <i class="fa fa-youtube-play" id="yt" aria-hidden="true"></i>
-                                        </a>
-                                    </span>
-                        </li>
-                    </ul>
+                <div class="tile is-parent">
+                    <article class="tile is-child box"data-aos="zoom-out-up" data-aos-duration="1500">
+                        <p class="title">Pilates</p>
+                    </article>
+                </div>
+                <div class="tile is-parent">
+                    <article class="tile is-child box"data-aos="zoom-out-up" data-aos-duration="1500">
+                        <p class="title">Muscle Strengthening</p>
+                    </article>
+                </div>
+                <div class="tile is-parent">
+                    <article class="tile is-child box"data-aos="zoom-out-up" data-aos-duration="1500">
+                        <p class="title">Pre + Post Partum Gymnastics</p>
+                    </article>
+                </div>
+            </div>
+            <div class="tile is-ancestor">
+                <div class="tile is-parent">
+                    <article class="tile is-child box"data-aos="zoom-out-up" data-aos-duration="1500">
+                        <p class="title">Physical Reconditioning</p>
+                    </article>
+                </div>
+                <div class="tile is-parent">
+                    <article class="tile is-child box"data-aos="zoom-out-up" data-aos-duration="1500">
+                        <p class="title">Zumba</p>
+                    </article>
+                </div>
+                <div class="tile is-parent">
+                    <article class="tile is-child box"data-aos="zoom-out-up" data-aos-duration="1500">
+                        <p class="title">3B</p>
+                    </article>
+                </div>
+                <div class="tile is-parent">
+                    <article class="tile is-child box"data-aos="zoom-out-up" data-aos-duration="1500">
+                        <p class="title">Strong - by Zumba</p>
+                    </article>
                 </div>
             </div>
         </div>
     </div>
 </section>
-<section class="hero is-fullheight" id="gallery">
+
+<section class="hero is-medium is-info is-bold" id="contact">
+    <div class="hero-head">
+        <div class="container mt-6 has-text-centered" data-aos="zoom-out-up" data-aos-duration="1500">
+            <h1 class="title is-1" id="contacttitle">Contacts</h1>
+            <h2>Message for more information and follow for updates</h2>
+        </div>
+    </div>
     <div class="hero-body" data-aos="zoom-out-up" data-aos-duration="1500">
-        <div class="container">
-            <h1 class="title">Galeria</h1>
-            <div class="tabs is-centered">
-                <ul>
-                    <li class="is-active"><a>Pictures</a></li>
-                    <li><a>Videos</a></li>
+        <div class="container has-text-centered">
+            <div class="contacts">
+                <ul class="contactlist">
+                    <li class="py-4">
+                        <a class="subtitle icon-block"><i
+                                class="fa fa-phone"
+                                aria-hidden="true"></i>
+                            @ +351 915 211 079</a>
+                    </li>
+                    <li class="py-4">
+                        <a class="subtitle icon-block"><i
+                                class="fa fa-envelope-square" aria-hidden="true"></i> @
+                            macissa_7@yahoo.com.br</a>
+                    </li>
+                    <li class="py-4">
+                        <a class="subtitle icon-block button is-info"
+                           href="https://www.facebook.com/macissapt">
+                            <i class="fa fa-facebook-official" aria-hidden="true"></i>&nbsp;@ macissapt
+                        </a>
+                    </li>
+                    <li class="py-4">
+                        <a class="subtitle icon-block button is-info" href="https://www.instagram.com/macissapt/">
+                            <i class="fa fa-instagram" id="ig" aria-hidden="true"></i>&nbsp;@ macissapt
+                        </a>
+                    <li class="py-4">
+                        <a class="subtitle icon-block button is-info" href="https://t.me/ceciliaasuaptonline">
+                            <i class="fa fa-telegram" id="tg" aria-hidden="true"></i>&nbsp;@ ceciliaasuaptonline
+                        </a>
+                    <li class="py-4">
+                        <a class="subtitle icon-block button is-info"
+                           href="https://www.youtube.com/mariaceciliasantospersonaltrainer">
+                            <i class="fa fa-youtube-play" id="yt" aria-hidden="true"></i>&nbsp;@
+                            mariaceciliasantospersonaltrainer
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
     </div>
 </section>
-<section class="hero is-fullheight" id="bookings">
-    <div class="hero-body" data-aos="zoom-out-up" data-aos-duration="1500">
-        <div class="container">
-            <h1 class="title">Treinos</h1>
+
+<section class="hero is-fullheight" id="gallery">
+    <div class="hero-head mt-6" data-aos="zoom-out-up" data-aos-duration="1500">
+        <div class="container has-text-centered">
+            <h1 class="title is-1" id="gallerytitle">Gallery</h1>
+            <div class="tabs is-centered">
+                <ul class="medialist">
+                    <li class="is-active" id="pictures"><a><i class="fa fa-picture-o" aria-hidden="true"></i>&nbsp;Pictures</a>
+                        <div class="modal">
+                            <div class="modal-background"></div>
+                            <div class="modal-content">
+                                <p class="image is-4by3">
+                                    <img src="https://bulma.io/images/placeholders/1280x960.png" alt="">
+                                </p>
+                            </div>
+                            <button class="modal-close is-large" aria-label="close"></button>
+                        </div>
+                    </li>
+                    <li id="videos"><a><i class="fa fa-film" aria-hidden="true"></i>&nbsp;Videos</a></li>
+                </ul>
+            </div>
         </div>
     </div>
 </section>
+
+<section class="hero is-large is-info is-bold" id="reviews">
+    <div class="hero-head mt-6" data-aos="zoom-out-up" data-aos-duration="1500">
+        <div class="container has-text-centered">
+            <h1 class="title is-1">Reviews</h1>
+        </div>
+    </div>
+    <div class="hero-body" data-aos="zoom-out-up" data-aos-duration="1500">
+        <div class="columns has-text-centered">
+            <div class="column">
+                First column
+            </div>
+            <div class="column">
+                Second column
+            </div>
+            <div class="column">
+                Third column
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="hero is-fullheight" id="bookings">
+    <div class="hero-head">
+        <h1 class="title is-1 mt-6 has-text-centered" data-aos="zoom-out-up" data-aos-duration="1500">Bookings</h1>
+    </div>
+    <div class="hero-body" data-aos="zoom-out-up" data-aos-duration="1500">
+        <div class="container">
+            <div class="tile is-parent">
+                <article class="tile is-child notification">
+                    <div class="content">
+                        <header class="title">Leave me a message</header>
+                        <div class="field">
+                            <label class="label">Name</label>
+                            <div class="control">
+                                <input class="input" type="text">
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <label class="label">Email</label>
+                            <div class="control">
+                                <input class="input" type="email">
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <label class="label">Message</label>
+                            <div class="control">
+                                <textarea class="textarea"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="field is-grouped">
+                            <div class="control">
+                                <button class="button is-link">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="content has-text-centered">
+        <p>
+            <a href="#home"><i class="fa fa-copyright" aria-hidden="true"></i> 2020 • MARIA CECÍLIA SANTOS • PERSONAL
+                TRAINER</a>
+        </p>
+    </div>
+</footer>
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-<script>
-    AOS.init();
-</script>
+<script>AOS.init();</script>
 <script type="text/javascript" src="{% static 'scripts/script.js' %}"></script>
 </body>
 </html>

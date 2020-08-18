@@ -1,37 +1,31 @@
 html {
     scroll-behavior: smooth;
-    color: white;
 }
 
-#navbar {
+body {
+    font-family: "Roboto Mono", monospace;
+    color: black;
+}
+
+.navbar {
     background-color: transparent;
     background-image: none;
 }
 
-#navbarend {
-    background-color: hsl(0, 0%, 96%);
-    padding: 0px 10px;
-    background-image: none;
-    border-radius: 60px;
-}
-
-#logo {
-    width: 120px;
-    height: 60px;
-}
-
 #home {
     background: url("/static/images/bg2.jpg") no-repeat fixed;
-    background-size: 100% 100%;
+    background-size: cover;
+    background-position: center center;
 }
 
-#titlename {
+.maintitle {
     letter-spacing: 2px;
-    font-size: 50px;
+    text-shadow: 1px 1px hsl(0, 0%, 21%);
 }
 
 #subtitlejob {
     letter-spacing: 6px;
+    text-shadow: 1px 1px hsl(0, 0%, 21%);
 }
 
 #subtitlelink {
@@ -48,13 +42,23 @@ html {
 
 #trainbutton {
     padding: 0px 50px;
-}
-
-#indeximg{
-    width: 300px;
-    height: 300px;
+    font-size: 20px;
+    text-shadow: 1px 1px hsl(0, 0%, 21%);
 }
 
 section {
     background-color: hsl(0, 0%, 96%);
+    font-size: large;
+}
+
+.wolist li {
+    font-size: 25px;
+    border: solid;
+    border-color: hsl(204, 86%, 53%);
+    background-color: hsl(204, 86%, 53%);
+    border-radius: 10px;
+}
+
+.contactlist a:hover {
+    color:blue;
 }
