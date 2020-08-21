@@ -8,6 +8,7 @@
     <title>Cecilia</title>
     <link rel="shortcut icon" type="image/x-icon" href="{% static 'images/favico.ico' %}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/css/bulma-carousel.min.css">
     <link rel="stylesheet" href="{% static 'styles/index.css' %}">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -30,20 +31,20 @@
         <div id="navbarMenuHeroC" class="navbar-menu">
             <div class="navbar-end" id="navbarend">
                 <a class="navbar-item" href="#about" id="aboutbutton">
-                    About
+                    {% trans "About" %}
                 </a>
                 <a class="navbar-item" href="#contact">
-                    Contact
+                    {% trans "Contact" %}
                 </a>
                 <a class="navbar-item" href="#gallery">
-                    Gallery
+                    {% trans "Gallery" %}
                 </a>
                 <a class="navbar-item" href="#reviews">
-                    Reviews
+                    {% trans "Reviews" %}
                 </a>
                 <span class="navbar-item">
-                <a class="button is-info is-inverted" id="bookingsbutton" href="#bookings">
-                    Bookings
+                <a class="button is-info " id="bookingsbutton" href="#bookings">
+                    {% trans "Bookings" %}
                 </a>
             </span>
             </div>
@@ -51,11 +52,10 @@
     </div>
 </nav>
 
-<section class="hero is-info is-fullheight" id="home">
+<section class="hero is-info is-fullheight home">
     <div class="hero-body">
         <div class="container has-text-centered">
-            <a> <img src="{% static 'images/cecilia-circular.png'  %}"></a>
-
+            <a> <img class="mainimg" src="{% static 'images/cecilia-circular.png'  %}"></a>
             <h1 class="maintitle title is-unselectable">
                 <span>Personal Trainer</span>
                 <span> | Coach</span>
@@ -63,8 +63,8 @@
             <h2 class="subtitle is-unselectable" id="subtitlejob">
                 Maria Cecília Santos
             </h2>
-            <a class="button is-info -is-inverted is-unselectable" id="trainbutton" href="#bookings">LETS TRAIN
-                TOGETHER</a>
+            <a class="button is-info is-unselectable" id="trainbutton" href="#bookings">
+                {% trans "LETS TRAIN TOGETHER" %}</a>
         </div>
     </div>
 </section>
@@ -72,56 +72,58 @@
 <section class="hero is-large" id="about">
     <div class="hero-head mt-6">
         <div class="container has-text-centered" data-aos="zoom-out-up" data-aos-duration="1500">
-            <h1 class="title is-1">About</h1>
-            <a href="https://www.superprof.pt/personal-trainer-licenciada-com-anos-experiencia-treinos-personalizados-line.html"><img src="https://cdn.superprof.com/style/images/logo_sp_pinkV3.svg"></a>
+            <h1 class="title is-1">{% trans "About" %}</h1>
+            <a class="button" target="_blank" rel="noopener noreferrer"
+               href="https://www.superprof.pt/personal-trainer-licenciada-com-anos-experiencia-treinos-personalizados-line.html"><img
+                    src="https://cdn.superprof.com/style/images/logo_sp_pinkV3.svg"></a>
             <p class="subtitle mt-6">
-                Licensed personal trainer with over 15 years of experience.
+                <strong>{% trans "Licensed personal trainer with over 15 years of experience." %}</strong>
             </p>
             <p class="subtitle mt-3">
-                In-person and online personalized trainings.
+                <strong>{% trans "In-person and online personalized trainings." %}</strong>
             </p>
         </div>
         <div class="hero-body py-6 has-text-centered is-centered">
-            <div class="tile is-ancestor" >
+            <div class="tile is-ancestor">
                 <div class="tile is-parent">
                     <article class="tile is-child box" data-aos="zoom-out-up" data-aos-duration="1500">
                         <p class="title">Personal Training / Fitness Coaching</p>
                     </article>
                 </div>
                 <div class="tile is-parent">
-                    <article class="tile is-child box"data-aos="zoom-out-up" data-aos-duration="1500">
+                    <article class="tile is-child box" data-aos="zoom-out-up" data-aos-duration="1500">
                         <p class="title">Pilates</p>
                     </article>
                 </div>
                 <div class="tile is-parent">
-                    <article class="tile is-child box"data-aos="zoom-out-up" data-aos-duration="1500">
-                        <p class="title">Muscle Strengthening</p>
+                    <article class="tile is-child box" data-aos="zoom-out-up" data-aos-duration="1500">
+                        <p class="title">{% trans "Muscle Strengthening" %}</p>
                     </article>
                 </div>
                 <div class="tile is-parent">
-                    <article class="tile is-child box"data-aos="zoom-out-up" data-aos-duration="1500">
-                        <p class="title">Pre + Post Partum Gymnastics</p>
+                    <article class="tile is-child box" data-aos="zoom-out-up" data-aos-duration="1500">
+                        <p class="title">{% trans "Pre + Post Partum Gymnastics" %}</p>
                     </article>
                 </div>
             </div>
             <div class="tile is-ancestor">
                 <div class="tile is-parent">
-                    <article class="tile is-child box"data-aos="zoom-out-up" data-aos-duration="1500">
-                        <p class="title">Physical Reconditioning</p>
+                    <article class="tile is-child box" data-aos="zoom-out-up" data-aos-duration="1500">
+                        <p class="title">{% trans "Physical Reconditioning" %}</p>
                     </article>
                 </div>
                 <div class="tile is-parent">
-                    <article class="tile is-child box"data-aos="zoom-out-up" data-aos-duration="1500">
+                    <article class="tile is-child box" data-aos="zoom-out-up" data-aos-duration="1500">
                         <p class="title">Zumba</p>
                     </article>
                 </div>
                 <div class="tile is-parent">
-                    <article class="tile is-child box"data-aos="zoom-out-up" data-aos-duration="1500">
+                    <article class="tile is-child box" data-aos="zoom-out-up" data-aos-duration="1500">
                         <p class="title">3B</p>
                     </article>
                 </div>
                 <div class="tile is-parent">
-                    <article class="tile is-child box"data-aos="zoom-out-up" data-aos-duration="1500">
+                    <article class="tile is-child box" data-aos="zoom-out-up" data-aos-duration="1500">
                         <p class="title">Strong - by Zumba</p>
                     </article>
                 </div>
@@ -133,47 +135,52 @@
 <section class="hero is-medium is-info is-bold" id="contact">
     <div class="hero-head">
         <div class="container mt-6 has-text-centered" data-aos="zoom-out-up" data-aos-duration="1500">
-            <h1 class="title is-1" id="contacttitle">Contacts</h1>
-            <h2>Message for more information and follow for updates</h2>
+            <h1 class="title is-1" id="contacttitle">{% trans "Contacts" %}</h1>
+            <h2>{% trans "Message for more information and follow for updates" %}</h2>
         </div>
     </div>
     <div class="hero-body" data-aos="zoom-out-up" data-aos-duration="1500">
-        <div class="container has-text-centered">
-            <div class="contacts">
-                <ul class="contactlist">
-                    <li class="py-4">
-                        <a class="subtitle icon-block"><i
-                                class="fa fa-phone"
-                                aria-hidden="true"></i>
-                            @ +351 915 211 079</a>
-                    </li>
-                    <li class="py-4">
-                        <a class="subtitle icon-block"><i
-                                class="fa fa-envelope-square" aria-hidden="true"></i> @
-                            macissa_7@yahoo.com.br</a>
-                    </li>
-                    <li class="py-4">
-                        <a class="subtitle icon-block button is-info"
-                           href="https://www.facebook.com/macissapt">
-                            <i class="fa fa-facebook-official" aria-hidden="true"></i>&nbsp;@ macissapt
-                        </a>
-                    </li>
-                    <li class="py-4">
-                        <a class="subtitle icon-block button is-info" href="https://www.instagram.com/macissapt/">
-                            <i class="fa fa-instagram" id="ig" aria-hidden="true"></i>&nbsp;@ macissapt
-                        </a>
-                    <li class="py-4">
-                        <a class="subtitle icon-block button is-info" href="https://t.me/ceciliaasuaptonline">
-                            <i class="fa fa-telegram" id="tg" aria-hidden="true"></i>&nbsp;@ ceciliaasuaptonline
-                        </a>
-                    <li class="py-4">
-                        <a class="subtitle icon-block button is-info"
-                           href="https://www.youtube.com/mariaceciliasantospersonaltrainer">
-                            <i class="fa fa-youtube-play" id="yt" aria-hidden="true"></i>&nbsp;@
-                            mariaceciliasantospersonaltrainer
-                        </a>
-                    </li>
-                </ul>
+        <div style="overflow:hidden;">
+            <div class="container has-text-centered">
+                <div class="contacts">
+                    <ul class="contactlist">
+                        <li class="py-2">
+                            <a class="subtitle button is-link" target="_blank" rel="noopener noreferrer"
+                               href="tel:+351 915 211 079"><i
+                                    class="fa fa-phone"
+                                    aria-hidden="true"></i>&nbsp;@ +351 915 211 079</a>
+                        </li>
+                        <li class="py-2">
+                            <a class="subtitle button is-link" target="_blank" rel="noopener noreferrer"
+                               href="mailto:macissa_7@yahoo.com.br">
+                                <i class="fa fa-envelope-square" aria-hidden="true"></i>&nbsp;@
+                                macissa_7@yahoo.com.br</a>
+                        </li>
+                        <li class="py-2">
+                            <a class="subtitle button is-link" target="_blank" rel="noopener noreferrer"
+                               href="https://www.facebook.com/macissapt">
+                                <i class="fa fa-facebook-official" aria-hidden="true"></i>&nbsp;@ macissapt
+                            </a>
+                        </li>
+                        <li class="py-2">
+                            <a class="subtitle button is-link" target="_blank" rel="noopener noreferrer"
+                               href="https://www.instagram.com/macissapt/">
+                                <i class="fa fa-instagram" id="ig" aria-hidden="true"></i>&nbsp;@ macissapt
+                            </a>
+                        <li class="py-2">
+                            <a class="subtitle button is-link" target="_blank" rel="noopener noreferrer"
+                               href="https://t.me/ceciliaasuaptonline">
+                                <i class="fa fa-telegram" id="tg" aria-hidden="true"></i>&nbsp;@ ceciliaasuaptonline
+                            </a>
+                        <li class="py-2">
+                            <a class="subtitle button is-link" target="_blank" rel="noopener noreferrer"
+                               href="https://www.youtube.com/mariaceciliasantospersonaltrainer">
+                                <i class="fa fa-youtube-play" id="yt" aria-hidden="true"></i>&nbsp;@
+                                mariaceciliasantospersonaltrainer
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
@@ -182,43 +189,154 @@
 <section class="hero is-fullheight" id="gallery">
     <div class="hero-head mt-6" data-aos="zoom-out-up" data-aos-duration="1500">
         <div class="container has-text-centered">
-            <h1 class="title is-1" id="gallerytitle">Gallery</h1>
-            <div class="tabs is-centered">
+            <h1 class="title is-1" id="gallerytitle">{% trans "Gallery" %}</h1>
+            <div class="tabs is-centered is-toggle is-toggle-rounded">
                 <ul class="medialist">
-                    <li class="is-active" id="pictures"><a><i class="fa fa-picture-o" aria-hidden="true"></i>&nbsp;Pictures</a>
-                        <div class="modal">
-                            <div class="modal-background"></div>
-                            <div class="modal-content">
-                                <p class="image is-4by3">
-                                    <img src="https://bulma.io/images/placeholders/1280x960.png" alt="">
-                                </p>
-                            </div>
-                            <button class="modal-close is-large" aria-label="close"></button>
-                        </div>
+                    <li class="is-active" id="pictures"><a><i class="fa fa-picture-o" aria-hidden="true"></i>&nbsp;
+                        {% trans "Pictures" %}</a>
                     </li>
-                    <li id="videos"><a><i class="fa fa-film" aria-hidden="true"></i>&nbsp;Videos</a></li>
+                    <li id="videos"><a><i class="fa fa-film" aria-hidden="true"></i>&nbsp;{% trans "Videos" %}</a></li>
                 </ul>
+            </div>
+        </div>
+    </div>
+    <div class="hero-body" data-aos="zoom-out-up" data-aos-duration="1500">
+        <div class="container has-text-centered is-centered">
+            <div class="pictures">
+                <div class="container is-centered carouselcontainer">
+                    <div id="carousel" class="carousel">
+                        <div class="item-1">
+                            <figure class="image is-16by9 is-centered">
+                                <img src="{% static 'images/gallery/FB_IMG_1508714639067.jpg'  %}">
+                            </figure>
+                        </div>
+                        <div class="item-2">
+                            <figure class="image is-16by9 is-centered">
+                                <img src="{% static 'images/gallery/FB_IMG_1533053084362.jpg'  %}">
+                            </figure>
+                        </div>
+                        <div class="item-3">
+                            <figure class="image is-16by9 is-centered">
+                                <img src="{% static 'images/gallery/FB_IMG_1533053168499.jpg'  %}">
+                            </figure>
+                        </div>
+                        <div class="item-4">
+                            <figure class="image is-16by9 is-centered">
+                                <img src="{% static 'images/gallery/FB_IMG_1533053240145.jpg'  %}">
+                            </figure>
+                        </div>
+                        <div class="item-5">
+                            <figure class="image is-16by9 is-centered">
+                                <img src="{% static 'images/gallery/FB_IMG_1533053289378.jpg'  %}">
+                            </figure>
+                        </div>
+                        <div class="item-6">
+                            <figure class="image is-16by9 is-centered">
+                                <img src="{% static 'images/gallery/FB_IMG_1537637923094.jpg'  %}">
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="img-mobile is-hidden">
+                <figure class="image is-16by9 is-centered">
+                    <img src="{% static 'images/gallery/FB_IMG_1508714639067.jpg'  %}">
+                </figure>
+                <figure class="image is-16by9 is-centered">
+                    <img src="{% static 'images/gallery/FB_IMG_1533053084362.jpg'  %}">
+                </figure>
+                <figure class="image is-16by9 is-centered">
+                    <img src="{% static 'images/gallery/FB_IMG_1533053168499.jpg'  %}">
+                </figure>
+                <figure class="image is-16by9 is-centered">
+                    <img src="{% static 'images/gallery/FB_IMG_1533053240145.jpg'  %}">
+                </figure>
+                <figure class="image is-16by9 is-centered">
+                    <img src="{% static 'images/gallery/FB_IMG_1533053289378.jpg'  %}">
+                </figure>
+                <figure class="image is-16by9 is-centered">
+                    <img src="{% static 'images/gallery/FB_IMG_1537637923094.jpg'  %}">
+                </figure>
+            </div>
+            <div class="videos is-hidden">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/z0_GrL34o4E"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/VTyu4dtwRI8"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/Z4IyDrVkwjk"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/LIbQGgNEeYY"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                <p class="mt-6"><a target="_blank" rel="noopener noreferrer"
+                                   href="https://www.youtube.com/mariaceciliasantospersonaltrainer">
+                    {% trans "More" %}</a></p>
             </div>
         </div>
     </div>
 </section>
 
-<section class="hero is-large is-info is-bold" id="reviews">
+<section class="hero is-medium is-info is-bold" id="reviews">
     <div class="hero-head mt-6" data-aos="zoom-out-up" data-aos-duration="1500">
         <div class="container has-text-centered">
-            <h1 class="title is-1">Reviews</h1>
+            <h1 class="title is-1">{% trans "Reviews" %}</h1>
         </div>
     </div>
     <div class="hero-body" data-aos="zoom-out-up" data-aos-duration="1500">
-        <div class="columns has-text-centered">
-            <div class="column">
-                First column
-            </div>
-            <div class="column">
-                Second column
-            </div>
-            <div class="column">
-                Third column
+        <div class="container is-centered">
+            <div class="tile is-ancestor">
+                <div class="tile is-vertical is-12">
+                    <div class="tile">
+                        <div class="tile is-parent is-vertical">
+                            <article class="tile is-child box">
+                                <p class="title has-text-info">Rodrigo</p>
+                                <p>Simplesmente a melhor personal que vc pode ter!! Dinâmica,
+                                    compreensiva, desafiadora...</p>
+                            </article>
+                            <article class="tile is-child box">
+                                <p class="title has-text-info">Fabiana</p>
+                                <p>Amoooo ela é as aulas dela , chamo de prof alegria , ela tem uma energia incrível ,um
+                                    animo que eu so queria a metade kkk</p></article>
+                        </div>
+                        <div class="tile is-parent">
+                            <article class="tile is-child box">
+                                <p class="title has-text-info">Marlene</p>
+                                <p>Melhor PT de sempre !!
+                                    Desde o primeiro dia que percebi que estava com pessoa certa,para me ajudar no que
+                                    precisava.
+                                    Foi com a força dela e motivação que hoje vejo resultados tanto físicos como
+                                    psicológicos. Fez de mim uma rapariga com mais confiança e com mais vontade de
+                                    atingir os meus objetivos !!
+                                    Atitude, simpatia, motivação, amiga , palavras que a definem ..
+
+                                    Muitos obrigada à MINHA PT</p>
+                            </article>
+                        </div>
+                    </div>
+                    <div class="tile is-parent">
+                        <article class="tile is-child box">
+                            <p class="title has-text-info">Jorge Humberto</p>
+                            <p>Super, Recomendo.
+                                Além de ser uma excelente professora com um treino muito adaptado ás suas
+                                necessidades, é
+                                uma pessoa
+                                incrível que vai agradecer conhecer.
+                                Acreditem, nas mãos da Prof. Cecília a sua forma física em pouco tempo vê resultados
+                                e
+                                agradece. J. Teles. [aluno da Prof. à vários anos]</p>
+                        </article>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -226,43 +344,63 @@
 
 <section class="hero is-fullheight" id="bookings">
     <div class="hero-head">
-        <h1 class="title is-1 mt-6 has-text-centered" data-aos="zoom-out-up" data-aos-duration="1500">Bookings</h1>
+        <h1 class="title is-1 mt-6 has-text-centered" data-aos="zoom-out-up" data-aos-duration="1500">
+            {% trans "Bookings" %}</h1>
     </div>
     <div class="hero-body" data-aos="zoom-out-up" data-aos-duration="1500">
         <div class="container">
-            <div class="tile is-parent">
-                <article class="tile is-child notification">
-                    <div class="content">
-                        <header class="title">Leave me a message</header>
-                        <div class="field">
-                            <label class="label">Name</label>
-                            <div class="control">
-                                <input class="input" type="text">
-                            </div>
-                        </div>
-
-                        <div class="field">
-                            <label class="label">Email</label>
-                            <div class="control">
-                                <input class="input" type="email">
-                            </div>
-                        </div>
-
-                        <div class="field">
-                            <label class="label">Message</label>
-                            <div class="control">
-                                <textarea class="textarea"></textarea>
-                            </div>
-                        </div>
-
-                        <div class="field is-grouped">
-                            <div class="control">
-                                <button class="button is-link">Submit</button>
-                            </div>
+            <nav class="level">
+                <div class="level-left">
+                    <div class="level-item">
+                        <div class="container has-text-centered" data-aos="zoom-out-up" data-aos-duration="1500">
+                            <header class="title mb-6">{% trans "Make an appointment" %}</header>
+                            <a class="button is-large" target="_blank" rel="noopener noreferrer"
+                               href="https://www.superprof.pt/personal-trainer-licenciada-com-anos-experiencia-treinos-personalizados-line.html"><img
+                                    src="https://cdn.superprof.com/style/images/logo_sp_pinkV3.svg"></a>
                         </div>
                     </div>
-                </article>
-            </div>
+                </div>
+                <div class="level-item">
+                    <p><strong>OR</strong></p>
+                </div>
+                <div class="level-right">
+                    <div class="level-item">
+                        <div class="tile is-parent">
+                            <article class="tile is-child notification">
+                                <div class="content">
+                                    <header class="title mb-6">{% trans "Leave me a message" %}</header>
+                                    <form method="post">
+                                        {% csrf_token %}
+                                        <div class="field">
+                                            <label class="label">{% trans "Name" %}</label>
+                                            <div class="control">
+                                                <input class="input" name="name" type="text" maxlength="50" required>
+                                            </div>
+                                        </div>
+                                        <div class="field">
+                                            <label class="label">Email</label>
+                                            <div class="control">
+                                                <input class="input" name="email" type="email" maxlength="50" required>
+                                            </div>
+                                        </div>
+                                        <div class="field">
+                                            <label class="label">{% trans "Message" %}</label>
+                                            <div class="control">
+                                                <textarea class="textarea" name="message" maxlength="500" required></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="field is-grouped">
+                                            <div class="control">
+                                                <button id="submit" type="submit" class="button is-link">{% trans 'Submit' %}</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </nav>
         </div>
     </div>
 </section>
@@ -270,7 +408,8 @@
 <footer class="footer">
     <div class="content has-text-centered">
         <p>
-            <a href="#home"><i class="fa fa-copyright" aria-hidden="true"></i> 2020 • MARIA CECÍLIA SANTOS • PERSONAL
+            <a href="#home"><i class="fa fa-copyright" aria-hidden="true"></i> 2020 • MARIA CECÍLIA SANTOS •
+                PERSONAL
                 TRAINER</a>
         </p>
     </div>
@@ -278,5 +417,15 @@
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>AOS.init();</script>
 <script type="text/javascript" src="{% static 'scripts/script.js' %}"></script>
+<script src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/js/bulma-carousel.min.js"></script>
+<script>bulmaCarousel.attach('#carousel', {
+	slidesToScroll: 1,
+	slidesToShow: 1,
+	infinite: true,
+});
+
+
+
+</script>
 </body>
 </html>
