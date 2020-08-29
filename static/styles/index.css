@@ -3,8 +3,7 @@ html {
 }
 
 body {
-    font-family: "Roboto Mono", monospace;
-    color: black;
+    font-family: "Noto Sans", Serif;
 }
 
 .navbar {
@@ -12,10 +11,28 @@ body {
     background-image: none;
 }
 
-.home {
-    background: url("/static/images/bg2.jpg") no-repeat fixed;
+#home {
+    background: url("/static/images/homepage-banner-bg.svg") no-repeat;
     background-size: cover;
-    background-position: center center;
+    background-position: center bottom;
+}
+
+.backdiv {
+    background: url("/static/images/gray-right.svg") no-repeat;
+    background-position-x: center;
+    background-position-y: top;
+    background-size: cover;
+    background-repeat-x: no-repeat;
+    background-repeat-y: no-repeat;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    background-color: initial;
+    background-size: cover;
+}
+
+.background-is-transparent {
+    background-color: transparent !important;
 }
 
 .mainimg {
@@ -24,12 +41,12 @@ body {
 
 .maintitle {
     letter-spacing: 2px;
-    text-shadow: 1px 1px hsl(0, 0%, 21%);
+    /*text-shadow: 1px 1px hsl(0, 0%, 21%);*/
 }
 
 #subtitlejob {
     letter-spacing: 6px;
-    text-shadow: 1px 1px hsl(0, 0%, 21%);
+    /*text-shadow: 1px 1px hsl(0, 0%, 21%);*/
 }
 
 #subtitlelink {
@@ -55,14 +72,6 @@ section {
     font-size: large;
 }
 
-.wolist li {
-    font-size: 25px;
-    border: solid;
-    border-color: hsl(204, 86%, 53%);
-    background-color: hsl(204, 86%, 53%);
-    border-radius: 10px;
-}
-
 .is-hidden {
     visibility: hidden;
 }
@@ -77,6 +86,32 @@ section {
     bottom: 0;
 }
 
+.is-clean {
+    background: #ffffff;
+}
+
 .review{
     line-height: 30px;
+}
+
+.gradient {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 94%, rgba(0,0,0,0) 100%);
+    overflow: hidden;
+}
+
+.navbar-item:hover {
+    background-color: transparent !important;
+    text-decoration: underline;
+}
+
+#topButton {
+    position: fixed;
+    right: 0;
+    bottom: 0;
 }

@@ -14,7 +14,7 @@ $(document).ready(function() {
             $('.navbar-burger.burger.is-active').click();
         });
 
-        $('#bookingsbutton').removeClass('button');
+        $('.navbar-burguer').css('background-color', 'black !important');
         $('iframe').css({'width': 'unset', 'height': 'unset'});
         $('.img-mobile').removeClass('is-hidden');
         $('.pictures').toggleClass("is-hidden");
@@ -46,22 +46,47 @@ $(document).ready(function() {
     });
     //
 
+    $('.breadButton').click(function(){
+        $('.breadButton').removeClass('is-active');
+        $(this).addClass('is-active');
+        if($(this).hasClass('method')) {
+            $('#method').removeClass('is-hidden');
+            $('#training').addClass('is-hidden');
+            $('#CV').addClass('is-hidden');
+        }
+
+        else if($(this).hasClass('training')) {
+            $('#method').addClass('is-hidden');
+            $('#training').removeClass('is-hidden');
+            $('#CV').addClass('is-hidden');
+        }
+
+        else if($(this).hasClass('CV')) {
+            $('#method').addClass('is-hidden');
+            $('#training').addClass('is-hidden');
+            $('#CV').removeClass('is-hidden');
+        }
+    });
+
     $('#submit').click(function() {
         $(this).toggleClass('is-loading');
     })
 
-    var lastScrollTop = 0;
+    //var lastScrollTop = 0;
     $(window).on('scroll', function() {
         var st = window.pageYOffset || document.documentElement.scrollTop;
-        if (st > lastScrollTop) {
+        if (st > 20) {
             $('.navbar').css({'opacity': '0', 'transition': 'opacity 0.5s ease-out'});
             if($('.navbar').css('opacity') == 0) {
                 $('.navbar').css('visibility', 'hidden');
             }
-        } else {
-            $('.navbar').css({'visibility': 'visible', 'opacity': '1', 'transition': 'opacity 0.5s ease-in'});
+            $('#topButton').removeClass('is-invisible');
         }
-        lastScrollTop = st <= 0 ? 0 : st;
+        else {
+            $('.navbar').css({'visibility': 'visible', 'opacity': '1', 'transition': 'opacity 0.5s ease-in'});
+            $('#topButton').addClass('is-invisible');
+        }
+        //lastScrollTop = st <= 0 ? 0 : st;
     });
 
 });
