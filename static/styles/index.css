@@ -3,7 +3,7 @@ html {
 }
 
 body {
-    font-family: "Noto Sans", Serif;
+    font-family: "Rubik";
 }
 
 .navbar {
@@ -12,13 +12,21 @@ body {
 }
 
 #home {
-    background: url("/static/images/homepage-banner-bg.svg") no-repeat;
+    background: url("/static/images/homepage.png") no-repeat;
     background-size: cover;
     background-position: center bottom;
 }
 
-.backdiv {
-    background: url("/static/images/gray-right.svg") no-repeat;
+#bookingsbutton {
+    background-color: #0073ec;
+    -webkit-transition: background-color 0.3s ease-out;
+    -moz-transition: background-color 0.3s ease-out;
+    -o-transition: background-color 0.3s ease-out;
+    transition: background-color 0.3s ease-out;
+}
+
+#about {
+    background: url("/static/images/gray-right.png") no-repeat;
     background-position-x: center;
     background-position-y: top;
     background-size: cover;
@@ -27,19 +35,31 @@ body {
     background-attachment: initial;
     background-origin: initial;
     background-clip: initial;
-    background-color: initial;
+    background-color: white;
     background-size: cover;
 }
+
 
 .background-is-transparent {
     background-color: transparent !important;
 }
 
-.mainimg {
-    width: 500px;
+.main-video {
+    width: 700px;
+    border-radius: 20px;
+}
+
+#mainimg {
+    cursor: default;
+    width: 750px;
+}
+
+.mainleft {
+    max-width: 500px;
 }
 
 .maintitle {
+    font-size: 70px;
     letter-spacing: 2px;
     /*text-shadow: 1px 1px hsl(0, 0%, 21%);*/
 }
@@ -62,9 +82,13 @@ body {
 }
 
 #trainbutton {
-    padding: 0px 50px;
-    font-size: 20px;
-    text-shadow: 1px 1px hsl(0, 0%, 21%);
+    background-color: #0073ec;
+    padding: 25px 60px;
+    font-size: 15px;
+    -webkit-transition: background-color 0.3s ease-out;
+    -moz-transition: background-color 0.3s ease-out;
+    -o-transition: background-color 0.3s ease-out;
+    transition: background-color 0.3s ease-out;
 }
 
 section {
@@ -72,22 +96,9 @@ section {
     font-size: large;
 }
 
-.is-hidden {
-    visibility: hidden;
-}
-
-.carouselcontainer {
-    max-width: 70%;
-    max-height: 70%;
-}
-
 .author {
     float:right;
     bottom: 0;
-}
-
-.is-clean {
-    background: #ffffff;
 }
 
 .review{
@@ -108,6 +119,19 @@ section {
 .navbar-item:hover {
     background-color: transparent !important;
     text-decoration: underline;
+    color: white !important;
+}
+
+#trainbutton:hover, #bookingsbutton:hover {
+     background-color: hsl(217, 71%, 45%);
+}
+
+#ig {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 50px;
 }
 
 #topButton {
