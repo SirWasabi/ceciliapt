@@ -64,7 +64,7 @@
                 <div class="level-left">
                     <div class="level-item">
                         <div class="container mainleft is-mobile">
-                            <h1 class="maintitle title is-unselectable has-text-light has-text-weight-bold pb-5">
+                            <h1 class="maintitle title is-unselectable has-text-light has-text-weight-bold pb-6">
                                 Vem Mudar o Teu Estilo de Vida
                             </h1>
                             <h2 class="title is-unselectable has-text-light pb-6" id="job">
@@ -447,26 +447,28 @@
                                 <header class="title has-text-centered mb-6">Deixa uma mensagem</header>
                                 <form action="" method="post">{% csrf_token %}
                                     <div class="field">
-                                        <label class="label">Nome</label>
+                                        <label class="label">Nome *</label>
                                         <div class="control">
-                                            <input class="input" name="name" type="text" maxlength="50"
+                                            <input class="input is-info" id="namefield" name="name" type="text" maxlength="50"
                                                    required>
                                         </div>
                                     </div>
                                     <div class="field">
-                                        <label class="label">Email</label>
+                                        <label class="label">Email *</label>
                                         <div class="control">
-                                            <input class="input" name="email" type="email" maxlength="50"
+                                            <input class="input is-info" id="emailfield" name="email" type="email" maxlength="50"
                                                    required>
                                         </div>
+                                        <p class="help is-danger is-hidden" id="invalidEmail">Este email é inválido</p>
                                     </div>
                                     <div class="field">
-                                        <label class="label">Mensagem</label>
+                                        <label class="label">Mensagem *</label>
                                         <div class="control">
-                                                <textarea class="textarea" name="message" maxlength="500"
+                                                <textarea class="textarea is-info" id="messagefield" name="message" maxlength="500"
                                                           required></textarea>
                                         </div>
                                     </div>
+                                    <p id="formWarning">Campos com * são necessários</p>
                                     <div class="field is-grouped">
                                         <div class="control">
                                             <button id="submit" type="submit" class="button is-link">

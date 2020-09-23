@@ -4,6 +4,14 @@ function mobilecheck() {
     return check;
 };
 
+function validate_form() {
+    var pattern = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    if($('#namefield').val() != "" && pattern.test($('#emailfield').val()) && $('#messagefield').val() != "") {
+        return true;
+    }
+    return false;
+}
+
 $(document).ready(function() {
 
     if(mobilecheck()) {
@@ -83,7 +91,9 @@ $(document).ready(function() {
     });
 
     $('#submit').click(function() {
-        $(this).toggleClass('is-loading');
+        if(validate_form()) {
+            $(this).toggleClass('is-loading');
+        }
     })
 
     //SLICK
@@ -119,5 +129,18 @@ $(document).ready(function() {
         }
         //lastScrollTop = st <= 0 ? 0 : st;
     });
+
+    $('#emailfield').change(function() {
+        var pattern = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        if (pattern.test($(this).val())) {
+            $('#invalidEmail').addClass('is-hidden');
+            $('#emailfield').addClass('is-info');
+            $('#emailfield').removeClass('is-danger');
+        } else {
+            $('#invalidEmail').removeClass('is-hidden');
+            $('#emailfield').addClass('is-danger');
+            $('#emailfield').removeClass('is-info');
+        }
+    })
 
 });

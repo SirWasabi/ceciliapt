@@ -1,15 +1,18 @@
 from django.core.mail import send_mail
 from django.http import HttpResponse
 from django.shortcuts import render
+from django.utils import timezone
+
 from ceciliapt.forms import MessageForm
 
 
 # Create your views here.
+from mainapp.models import Message
 
 
 def index(request, *args, **kwargs):
     if request.method == "POST":
-        mail(request)
+        message(request)
         return render(request, "thanks.html", {})
     else:
         print(request.LANGUAGE_CODE)
@@ -21,7 +24,6 @@ def index(request, *args, **kwargs):
 
 def mail(request):
     if request.method == "POST":
-        print(request.POST)
         form = MessageForm(request.POST)
         if form.is_valid():
             # SETUP COM O EMAIL DA CECILIA TODO
@@ -30,3 +32,24 @@ def mail(request):
                       [request.POST['email']])
     else:
         return HttpResponse("<header>Unavaiable</header>")
+
+
+def message(request):
+    if request.method == "POST":
+        form = MessageForm(request.POST)
+        if form.is_valid():
+            ip = visitor_ip_address(request)
+            name = request.POST['name']
+            email = request.POST['email']
+            msg = request.POST['message']
+            m = Message(ip, name, email, msg, timezone.now())
+            m.save()
+
+
+def visitor_ip_address(request):
+    x_forwarded_for = request.META.get('HTTP_X_FORWARDED_FOR')
+    if x_forwarded_for:
+        ip = x_forwarded_for.split(',')[0]
+    else:
+        ip = request.META.get('REMOTE_ADDR')
+    return ip

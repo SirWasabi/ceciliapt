@@ -12,7 +12,7 @@ body {
 }
 
 #home {
-    background: url("/static/images/homepage.png") no-repeat;
+    background: url("/static/images/homepage2.png") no-repeat;
     background-size: cover;
     background-position: center bottom;
 }
@@ -138,4 +138,8 @@ section {
     position: fixed;
     right: 0;
     bottom: 0;
+}
+
+#formWarning {
+    font-size: 15px;
 }
