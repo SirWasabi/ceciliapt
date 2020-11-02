@@ -3,6 +3,7 @@ from django.http import HttpResponse
 from django.shortcuts import render
 from django.utils import timezone
 
+from ceciliapt.settings import EMAIL_HOST_PASSWORD, EMAIL_HOST_USER
 from ceciliapt.forms import MessageForm
 
 
@@ -21,18 +22,18 @@ def index(request, *args, **kwargs):
         else:
             return render(request, "index-en.html", {})
 
-
+'''
 def mail(request):
     if request.method == "POST":
         form = MessageForm(request.POST)
         if form.is_valid():
             # SETUP COM O EMAIL DA CECILIA TODO
             message = request.POST['name'] + ' ' + '(' + request.POST['email'] + ') diz: ' + request.POST['message']
-            send_mail('Mensagem de ' + request.POST['name'], message, 'ceciliaptwebsite@gmail.com',
-                      [request.POST['email']])
+            send_mail('Mensagem de ' + request.POST['name'], EMAIL_HOST_USER,
+                      [request.POST['email']], False, EMAIL_HOST_PASSWORD, html_message=message)
     else:
-        return HttpResponse("<header>Unavaiable</header>")
-
+        return HttpResponse("<header>Unavailable</header>")
+'''
 
 def message(request):
     if request.method == "POST":

@@ -136,7 +136,7 @@ LANGUAGES = (
 
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
-EMAIL_HOST_USER = 'ceciliaptwebsite@gmail.com'
-EMAIL_HOST_PASSWORD = 'CeciliaPT2020'
+EMAIL_HOST_USER = None
+EMAIL_HOST_PASSWORD = None
 EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False
