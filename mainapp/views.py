@@ -1,5 +1,7 @@
+from mainapp.utils import visitor_ip_address
 from django.core.mail import send_mail
 from django.http import HttpResponse
+from django.http.response import JsonResponse
 from django.shortcuts import render
 from django.utils import timezone
 
@@ -16,7 +18,6 @@ def index(request, *args, **kwargs):
         message(request)
         return render(request, "thanks.html", {})
     else:
-        print(request.LANGUAGE_CODE)
         if request.LANGUAGE_CODE == 'pt':
             return render(request, "index-pt.html", {})
         else:
@@ -35,6 +36,7 @@ def mail(request):
         return HttpResponse("<header>Unavailable</header>")
 '''
 
+
 def message(request):
     if request.method == "POST":
         form = MessageForm(request.POST)
@@ -45,12 +47,3 @@ def message(request):
             msg = request.POST['message']
             m = Message(ip, name, email, msg, timezone.now())
             m.save()
-
-
-def visitor_ip_address(request):
-    x_forwarded_for = request.META.get('HTTP_X_FORWARDED_FOR')
-    if x_forwarded_for:
-        ip = x_forwarded_for.split(',')[0]
-    else:
-        ip = request.META.get('REMOTE_ADDR')
-    return ip

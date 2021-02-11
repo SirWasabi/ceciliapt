@@ -2,6 +2,7 @@
 {% load i18n %}
 {% load static %}
 <html>
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1.0, user-scalable=no">
@@ -9,495 +10,637 @@
     <link rel="shortcut icon" type="image/x-icon" href="{% static 'images/favico.ico' %}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
     <link rel="stylesheet" href="{% static 'styles/index.css' %}">
-    <link rel="stylesheet" href="{% static 'AOS/aos.css' %}"/>
+    <link rel="stylesheet" href="{% static 'AOS/aos.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik">
-    <link rel="stylesheet" type="text/css" href="{% static 'slick/slick.css' %}"/>
-    <link rel="stylesheet" type="text/css" href="{% static 'slick/slick-theme.css' %}"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
+
 <body>
-<nav class="navbar is-spaced has-text-weight-semibold is-fixed-top">
-    <div class="container">
-        <div class="navbar-brand">
-            <a href="/"> <img src="{% static 'images/logowhite.png'  %}" width="120" height="30" alt="Logo"
-                              id="logo"></a>
-            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-                <span style="color:white;" aria-hidden="true"></span>
-                <span style="color:white;" aria-hidden="true"></span>
-                <span style="color:white;" aria-hidden="true"></span>
-            </a>
-        </div>
-        <div class="navbar-menu">
-            <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-                <a class="navbar-item mx-5 has-text-light has-text-weight-light" href="#about" id="aboutbutton">
-                    Sobre
-                </a>
-                <a class="navbar-item mx-5 has-text-light has-text-weight-light" href="#contact">
-                    Contacto
-                </a>
-                <a class="navbar-item mx-5 has-text-light has-text-weight-light" href="#gallery">
-                    Galeria
-                </a>
-                <a class="navbar-item mx-5 has-text-light has-text-weight-light" href="#reviews">
-                    Comentários
-                </a>
-                <a class="navbar-item mx-5 has-text-light has-text-weight-light is-hidden" id="bookingsmobile"
-                   href="#bookings">
-                    Marcações
-                </a>
-            </div>
-            <div class="navbar-end">
-                <a class="button is-info big-button" id="bookingsbutton" href="#bookings">
-                    Marcações
-                </a>
-            </div>
-        </div>
-    </div>
-</nav>
-{% block content %}
-
-<section class="hero is-fullheight is-info" id="home">
-    <div class="hero-body">
+    <nav class="navbar is-spaced has-text-weight-semibold is-fixed-top">
         <div class="container">
-            <nav class="level">
-                <div class="level-left">
-                    <div class="level-item">
-                        <div class="container mainleft is-mobile">
-                            <h1 class="maintitle title is-unselectable has-text-light has-text-weight-bold pb-6">
-                                Vem Mudar o Teu Estilo de Vida
-                            </h1>
-                            <h2 class="title is-unselectable has-text-light pb-6" id="job">
-                                <span>Personal Trainer</span>
-                                <span> | Coach</span>
-                            </h2>
-                            <h2 class="subtitle is-4 is-unselectable has-text-light pb-4" id="subtitleName">
-                                Maria Cecília Santos
-                            </h2>
-                            <a class="button is-link is-unselectable big-button" id="trainbutton"
-                               href="#bookings">
-                                Vamos Treinar</a>
+            <div class="navbar-brand">
+                <a href="/"> <img src="{% static 'images/logowhite.png'  %}" width="120" height="30" alt="Logo"
+                        id="logo"></a>
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+                    <span style="color:white;" aria-hidden="true"></span>
+                    <span style="color:white;" aria-hidden="true"></span>
+                    <span style="color:white;" aria-hidden="true"></span>
+                </a>
+            </div>
+            <div class="navbar-menu">
+                <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+                    <a class="navbar-item mx-5 has-text-light has-text-weight-semibold" href="#about" id="aboutbutton">
+                        Sobre
+                    </a>
+                    <a class="navbar-item mx-5 has-text-light has-text-weight-semibold" href="#contact">
+                        Contacto
+                    </a>
+                    <a class="navbar-item mx-5 has-text-light has-text-weight-semibold" href="#gallery">
+                        Galeria
+                    </a>
+                    <a class="navbar-item mx-5 has-text-light has-text-weight-semibold" href="#reviews">
+                        Comentários
+                    </a>
+                    <a class="navbar-item mx-5 has-text-weight-bold is-hidden" id="bookingsmobile" href="#bookings">
+                        Marcações
+                    </a>
+                </div>
+                <div class="navbar-end">
+                    <a class="button is-info big-button" id="bookingsbutton" href="#bookings">
+                        Marcações
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    {% block content %}
+
+    <section class="hero is-fullheight" id="home">
+        <div class="hero-body">
+            <div class="container">
+                <nav class="level">
+                    <div class="level-left">
+                        <div class="level-item">
+                            <div class="container mainleft is-mobile">
+                                <h1 class="maintitle title is-unselectable has-text-light has-text-weight-bold pb-6">
+                                    Vem Mudar o Teu Estilo de Vida
+                                </h1>
+                                <h2 class="title is-unselectable has-text-light pb-6" id="job">
+                                    <span>Personal Trainer</span>
+                                    <span> | Coach</span>
+                                </h2>
+                                <h2 class="subtitle is-4 is-unselectable has-text-light pb-4" id="subtitleName">
+                                    Maria Cecília Santos
+                                </h2>
+                                <a class="button is-link is-unselectable big-button" id="trainbutton" href="#bookings">
+                                    Vamos Treinar</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="level-right">
-                    <div class="level-item">
+                    <div class="level-right pr-6">
+                        <div class="level-item">
+                            <div class="container">
+                                <a>
+                                    <figure class="image mainimg">
+                                        <img class="is-unselectable" onContextMenu="return false;" id="mainimg"
+                                            src="{% static 'images/homepagepic.png' %}">
+                                    </figure>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <section class="hero is-fullheight" id="about">
+        <div class="hero-head mt-6">
+            <div class="container has-text-centered" data-aos="fade-down-right">
+                <h1 class="title is-1">Sobre</h1>
+            </div>
+        </div>
+        <div class="hero-body">
+            <div class="container">
+                <div
+                    class="columns is-vcentered is-variable is-1-mobile is-0-tablet is-3-desktop is-8-widescreen is-2-fullhd">
+                    <div class="column">
                         <div class="container">
-                            <a>
-                                <figure class="image mainimg">
-                                    <img class="is-unselectable" onContextMenu="return false;" id="mainimg"
-                                         src="{% static 'images/homepagepic.png' %}">
-                                </figure>
-                            </a>
+                            <video class="main-video is-unselectable" data-aos="fade-right" autoplay muted loop>
+                                <source src="{% static 'images/Zumbacut.mp4' %}" type="video/mp4">
+                            </video>
                         </div>
                     </div>
-                </div>
-            </nav>
-        </div>
-    </div>
-</section>
+                    <div class="column is-half " id="method" data-aos="fade-left">
+                        <div class="container">
+                            <div class="content">
+                                <div style="visibility: hidden; position: absolute; width: 0px; height: 0px;">
+                                    <svg xmlns="http://www.w3.org/2000/svg">
+                                        <symbol viewBox="0 0 24 24" id="expand-more">
+                                            <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z" />
+                                            <path d="M0 0h24v24H0z" fill="none" />
+                                        </symbol>
+                                        <symbol viewBox="0 0 24 24" id="close">
+                                            <path
+                                                d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" />
+                                            <path d="M0 0h24v24H0z" fill="none" />
+                                        </symbol>
+                                    </svg>
+                                </div>
 
-<section class="hero is-fullheight" id="about">
-    <div class="hero-head mt-6">
-        <div class="container has-text-centered" data-aos="fade-down-right">
-            <h1 class="title is-1">Sobre</h1>
+                                <details>
+                                    <summary>
+                                        Metodologia
+                                        <svg class="control-icon control-icon-expand" width="24" height="24"
+                                            role="presentation">
+                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#expand-more" />
+                                        </svg>
+                                        <svg class="control-icon control-icon-close" width="24" height="24"
+                                            role="presentation">
+                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close" />
+                                        </svg>
+                                    </summary>
+                                    <p>
+                                    <ul style="font-size: 15px;">
+                                        <li>
+                                            Um questionário Par-Q
+                                        </li>
+                                        <li>
+                                            Análise da condição fisica e composição corporal atual
+                                        </li>
+                                        <li>
+                                            Análise da dieta e dos níveis de stress atuais
+                                        </li>
+                                        <li>
+                                            Marcar um objectivo final e o plano de treino ideal no tempo que
+                                            tens
+                                        </li>
+                                    </ul>
+                                    </p>
+                                </details>
+                                <details>
+                                    <summary>
+                                        C.V.
+                                        <svg class="control-icon control-icon-expand" width="24" height="24"
+                                            role="presentation">
+                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#expand-more" />
+                                        </svg>
+                                        <svg class="control-icon control-icon-close" width="24" height="24"
+                                            role="presentation">
+                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close" />
+                                        </svg>
+                                    </summary>
+                                    <ul style="font-size: 15px;">
+                                        <li>
+                                            Licenciada em Ciências do Desporto, Exercício e Saúde pela FMH com vários
+                                            anos
+                                            de experiência na área do Fitness.
+                                        </li>
+                                        <li>
+                                            Instrutora de Pilates Clínico APPI - Australian Pilates Physiotherapy
+                                            Institute
+                                            desde Jan 2017
+                                        </li>
+                                        <li>
+                                            Exercício Fisico para Grávidas e Pós Parto - Formação Clínica das Conchas
+                                        </li>
+                                        <li>
+                                            Exercício Físico em oncologia - Formação Clínica das Conchas
+                                        </li>
+                                        <li>
+                                            Exercício Fisico para Idoso - Gnosies
+                                        </li>
+                                        <li>
+                                            Treinamento da mobilidade Articular - Well X Pro
+                                        </li>
+                                        <li>
+                                            Emagrecimento- Quebrando Mitos e Mudando Paradigmas - Método Dr. Paulo
+                                            Gentil
+                                        </li>
+                                        <li>
+                                            Métodos Avançados de Hipertrofia Muscular - Dr. Paulo Gentil
+                                        </li>
+                                    </ul>
+                                </details>
+                                <details>
+                                    <summary>
+                                        Tipos de treino
+                                        <svg class="control-icon control-icon-expand" width="24" height="24"
+                                            role="presentation">
+                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#expand-more" />
+                                        </svg>
+                                        <svg class="control-icon control-icon-close" width="24" height="24"
+                                            role="presentation">
+                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close" />
+                                        </svg>
+                                    </summary>
+                                    <p>
+                                    <ul style="font-size: 15px;">
+                                        <li>Personal Training / Fitness Coaching</li>
+                                        <li>Pilates</li>
+                                        <li>Reforço muscular</li>
+                                        <li>Ginástica pré + pós-parto</li>
+                                        <li>Recondicionamento físico</li>
+                                        <li>Zumba</li>
+                                        <li>3B</li>
+                                        <li>Strong - by Zumba</li>
+                                    </ul>
+                                    </p>
+                                </details>
+                            </div>
+                        </div>
+    </section>
+
+    <section class="hero" id="contact">
+        <div class="hero-head">
+            <div class="container has-text-centered" data-aos="zoom-out-up">
+                <h1 class="title is-1" id="contacttitle">Contacto</h1>
+                <h2>Manda mensagem para mais informações e segue para novidades</h2>
+            </div>
         </div>
-        <nav class="breadcrumb is-medium has-bullet-separator is-centered pt-6" aria-label="breadcrumbs"
-             data-aos="fade-up">
-            <ul>
-                <li class="breadButton method is-active"><a>Metodologia</a></li>
-                <li class="breadButton training"><a>Tipos de Treino</a></li>
-                <li class="breadButton CV"><a>C.V.</a></li>
-            </ul>
-        </nav>
-    </div>
-    <div class="hero-body">
-        <div class="container">
-            <div class="columns is-vcentered is-variable is-1-mobile is-0-tablet is-3-desktop is-8-widescreen is-2-fullhd">
-                <div class="column">
-                    <div class="container">
-                        <video class="main-video is-unselectable" data-aos="fade-right" autoplay muted loop>
-                            <source src="{% static 'images/Zumbacut.mp4' %}" type="video/mp4">
-                        </video>
-                    </div>
-                </div>
-                <div class="column is-half" id="method">
-                    <div class="container">
-                        <div class="notification is-link">
-                            <div class="content">
-                                <p class="title is-3">Metodologia</p>
-                                <p>
-                                    Eu faço uma avaliação inicial dos meus alunos que inclui:
-                                </p>
-                                <ol>
-                                    <li class="px-6">
-                                        <strong>Um questionário Par-Q</strong>
-                                    </li>
-                                    <li class="px-6">
-                                        <strong>Análise da condição fisica e composição corporal atual</strong>
-                                    </li>
-                                    <li class="px-6">
-                                        <strong>Análise da dieta e dos níveis de stress atuais</strong>
-                                    </li>
-                                    <li class="px-6">
-                                        <strong>Marcar um objectivo final e o plano de treino ideal no tempo que
-                                            tens</strong>
-                                    </li>
-                                </ol>
-                                <p>
-                                    Eu viso ajudar os meus alunos a chegar aos seus objetivos, utilizando métodos de
-                                    treino seguros e eficientes
-                                    adequados a cada caso.
-                                    <br>
-                                    <br>
-                                    Não é só um treino!
-                                    <br>
-                                    <br>
-                                    <strong>É o plano de treino ideal para ti!</strong>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="column is-half is-hidden" id="CV" data-aos="fade-left">
-                    <div class="container">
-                        <div class="notification is-link">
-                            <div class="content">
-                                <p class="title is-3">C.V.</p>
-                                <ul>
-                                    <li>
-                                        Licenciada em Ciências do Desporto, Exercício e Saúde pela FMH com vários anos
-                                        de experiência na área do Fitness.
-                                    </li>
-                                    <li>
-                                        Instrutora de Pilates Clínico APPI - Australian Pilates Physiotherapy Institute
-                                        desde Jan 2017
-                                    </li>
-                                    <li>
-                                        Exercício Fisico para Grávidas e Pós Parto - Formação Clínica das Conchas
-                                    </li>
-                                    <li>
-                                        Exercício Físico em oncologia - Formação Clínica das Conchas
-                                    </li>
-                                    <li>
-                                        Exercício Fisico para Idoso - Gnosies
-                                    </li>
-                                    <li>
-                                        Treinamento da mobilidade Articular - Well X Pro
-                                    </li>
-                                    <li>
-                                        Emagrecimento- Quebrando Mitos e Mudando Paradigmas - Método Dr. Paulo Gentil
-                                    </li>
-                                    <li>
-                                        Métodos Avançados de Hipertrofia Muscular - Dr. Paulo Gentil
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="column is-half mb-4 is-hidden" id="training" data-aos="fade-left">
-                    <div class="container">
-                        <div class="notification is-link">
-                            <div class="content">
-                                <p class="title is-3">Tipos de treino</p>
-                                <ul>
-                                    <li>Personal Training / Fitness Coaching</li>
-                                    <li>Pilates</li>
-                                    <li>Reforço muscular</li>
-                                    <li>Ginástica pré + pós-parto</li>
-                                    <li>Recondicionamento físico</li>
-                                    <li>Zumba</li>
-                                    <li>3B</li>
-                                    <li>Strong - by Zumba</li>
-                                </ul>
-                            </div>
-                        </div>
+        <div class="hero-body" data-aos="zoom-out-up">
+            <div style="overflow:hidden;">
+                <div class="container has-text-centered">
+                    <div class="contacts">
+                        <ul class="contactlist">
+                            <li class="py-2">
+                                <a class="subtitle px-2" target="_blank" rel="noopener noreferrer"
+                                    href="https://www.facebook.com/macissapt">
+                                    <i class="fa fa-facebook-official" style="font-size: 50px; color: #4267B2;"
+                                        aria-hidden="true"></i>
+                                </a>
+                                <a class="subtitle px-2" target="_blank" rel="noopener noreferrer"
+                                    href="https://www.instagram.com/macissapt/">
+                                    <i class="fa fa-instagram" id="ig" aria-hidden="true"></i>
+                                </a>
+                                <a class="subtitle px-2" target="_blank" rel="noopener noreferrer"
+                                    href="https://t.me/ceciliaasuaptonline">
+                                    <i class="fa fa-telegram" style="font-size: 50px; color: #0088cc;" id="tg"
+                                        aria-hidden="true"></i>
+                                </a>
+                                <a class="subtitle px-2" target="_blank" rel="noopener noreferrer"
+                                    href="https://www.youtube.com/mariaceciliasantospersonaltrainer">
+                                    <i class="fa fa-youtube-play" style="font-size: 50px; color: #FF0000;" id="yt"
+                                        aria-hidden="true"></i>
+                                </a>
+                            </li>
+                            <li class="py-2">
+                                <a class="subtitle" target="_blank" rel="noopener noreferrer"
+                                    href="tel:+351 915 211 079"><i class="fa fa-phone" aria-hidden="true"></i>&nbsp;@
+                                    +351 915 211 079</a>
+                            </li>
+                            <li class="py-2">
+                                <a class="subtitle" target="_blank" rel="noopener noreferrer"
+                                    href="mailto:macissa_7@yahoo.com.br">
+                                    <i class="fa fa-envelope-square" aria-hidden="true"></i>&nbsp;@
+                                    macissa_7@yahoo.com.br</a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<section class="hero" id="contact">
-    <div class="hero-head">
-        <div class="container has-text-centered" data-aos="zoom-out-up">
-            <h1 class="title is-1" id="contacttitle">Contacto</h1>
-            <h2>Manda mensagem para mais informações e segue para novidades</h2>
-        </div>
-    </div>
-    <div class="hero-body" data-aos="zoom-out-up">
-        <div style="overflow:hidden;">
+    <section class="hero" id="gallery">
+        <div class="hero-head mt-6">
             <div class="container has-text-centered">
-                <div class="contacts">
-                    <ul class="contactlist">
-                        <li class="py-2">
-                            <a class="subtitle px-2" target="_blank" rel="noopener noreferrer"
-                               href="https://www.facebook.com/macissapt">
-                                <i class="fa fa-facebook-official" style="font-size: 50px; color: #4267B2;"
-                                   aria-hidden="true"></i>
-                            </a>
-                            <a class="subtitle px-2" target="_blank" rel="noopener noreferrer"
-                               href="https://www.instagram.com/macissapt/">
-                                <i class="fa fa-instagram" id="ig" aria-hidden="true"></i>
-                            </a>
-                            <a class="subtitle px-2" target="_blank" rel="noopener noreferrer"
-                               href="https://t.me/ceciliaasuaptonline">
-                                <i class="fa fa-telegram" style="font-size: 50px; color: #0088cc;" id="tg"
-                                   aria-hidden="true"></i>
-                            </a>
-                            <a class="subtitle px-2" target="_blank" rel="noopener noreferrer"
-                               href="https://www.youtube.com/mariaceciliasantospersonaltrainer">
-                                <i class="fa fa-youtube-play" style="font-size: 50px; color: #FF0000;" id="yt"
-                                   aria-hidden="true"></i>
-                            </a>
+                <h1 class="title is-1" id="gallerytitle" data-aos="fade-left">Galeria</h1>
+                <div class="tabs is-centered is-toggle is-toggle-rounded" data-aos="zoom-out-up">
+                    <ul class="medialist">
+                        <li class="is-active" id="pictures">
+                            <a><i class="fa fa-picture-o" aria-hidden="true"></i>&nbsp;Imagens</a>
                         </li>
-                        <li class="py-2">
-                            <a class="subtitle" target="_blank" rel="noopener noreferrer"
-                               href="tel:+351 915 211 079"><i
-                                    class="fa fa-phone"
-                                    aria-hidden="true"></i>&nbsp;@ +351 915 211 079</a>
-                        </li>
-                        <li class="py-2">
-                            <a class="subtitle" target="_blank" rel="noopener noreferrer"
-                               href="mailto:macissa_7@yahoo.com.br">
-                                <i class="fa fa-envelope-square" aria-hidden="true"></i>&nbsp;@
-                                macissa_7@yahoo.com.br</a>
+                        <li id="videos">
+                            <a><i class="fa fa-film" aria-hidden="true"></i>&nbsp;Videos</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+        <div class="hero-body" data-aos="zoom-out-up">
+            <div class="container">
+                <div class="pictures">
+                    <div class="columns">
+                        <div class="column is-one-fifth">
+                            <div class="card">
+                                <div class="card-image">
+                                    <figure class="image is-4by3">
+                                        <img src="{% static 'images/gallery/1.jpg' %}" loading="lazy">
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column is-one-fifth">
+                            <div class="card">
+                                <div class="card-image">
+                                    <figure class="image is-4by3">
+                                        <img src="{% static 'images/gallery/2.jpg' %}" loading="lazy">
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column is-one-fifth">
+                            <div class="card">
+                                <div class="card-image">
+                                    <figure class="image is-4by3">
+                                        <img src="{% static 'images/gallery/3.jpg' %}" loading="lazy">
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column is-one-fifth">
+                            <div class="card">
+                                <div class="card-image">
+                                    <figure class="image is-4by3">
+                                        <img src="{% static 'images/gallery/4.jpg' %}" loading="lazy">
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column is-one-fifth">
+                            <div class="card">
+                                <div class="card-image">
+                                    <figure class="image is-4by3">
+                                        <img src="{% static 'images/gallery/5.jpg' %}" loading="lazy">
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="columns">
+                        <div class="column is-one-fifth">
+                            <div class="card">
+                                <div class="card-image">
+                                    <figure class="image is-4by3">
+                                        <img src="{% static 'images/gallery/6.jpg' %}" loading="lazy">
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column is-one-fifth">
+                            <div class="card">
+                                <div class="card-image">
+                                    <figure class="image is-4by3">
+                                        <img src="{% static 'images/gallery/7.jpg' %}" loading="lazy">
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column is-one-fifth">
+                            <div class="card">
+                                <div class="card-image">
+                                    <figure class="image is-4by3">
+                                        <img src="{% static 'images/gallery/8.jpg' %}" loading="lazy">
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column is-one-fifth">
+                            <div class="card">
+                                <div class="card-image">
+                                    <figure class="image is-4by3">
+                                        <img src="{% static 'images/gallery/9.jpg' %}" loading="lazy">
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column is-one-fifth">
+                            <div class="card">
+                                <div class="card-image">
+                                    <figure class="image is-4by3">
+                                        <img src="{% static 'images/gallery/10.jpg' %}" loading="lazy">
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="videos is-hidden has-text-centered">
+                    <div class="columns">
+                        <div class="column is-one-third">
+                            <div class="card">
+                                <div class="card-image">
+                                    <figure class="image is-16by9">
+                                        <iframe class="has-ratio" width="520" height="360"
+                                            src="https://www.youtube.com/embed/z0_GrL34o4E" frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                            allowfullscreen>
+                                        </iframe>
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column is-one-third">
+                            <div class="card">
+                                <div class="card-image">
+                                    <figure class="image is-16by9">
+                                        <iframe class="has-ratio" width="520" height="360"
+                                            src="https://www.youtube.com/embed/VTyu4dtwRI8" frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                            allowfullscreen>
+                                        </iframe>
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column is-one-third">
+                            <div class="card">
+                                <div class="card-image">
+                                    <figure class="image is-16by9">
+                                        <iframe class="has-ratio" width="520" height="360"
+                                            src="https://www.youtube.com/embed/Z4IyDrVkwjk" frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                            allowfullscreen>
+                                        </iframe>
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="columns">
+                        <div class="column is-one-third">
+                            
+                        </div>
+                        <div class="column is-one-third">
+                            <div class="card">
+                                <div class="card-image">
+                                    <figure class="image is-16by9">
+                                        <iframe class="has-ratio" width="520" height="360"
+                                            src="https://www.youtube.com/embed/LIbQGgNEeYY" frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                            allowfullscreen>
+                                        </iframe>
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="mt-6 has-text-centered is-hidden" id="moremedia"><a target="_blank"
+                            rel="noopener noreferrer" href="https://www.youtube.com/mariaceciliasantospersonaltrainer">
+                            Mais</a></p>
+                </div>
+            </div>
+    </section>
 
-<section class="hero" id="gallery">
-    <div class="hero-head mt-6">
-        <div class="container has-text-centered">
-            <h1 class="title is-1" id="gallerytitle" data-aos="fade-left">Galeria</h1>
-            <div class="tabs is-centered is-toggle is-toggle-rounded" data-aos="zoom-out-up">
-                <ul class="medialist">
-                    <li class="is-active" id="pictures">
-                        <a><i class="fa fa-picture-o" aria-hidden="true"></i>&nbsp;Imagens</a>
-                    </li>
-                    <li id="videos">
-                        <a><i class="fa fa-film" aria-hidden="true"></i>&nbsp;Videos</a>
-                    </li>
-                </ul>
+    <section class="hero" id="reviews">
+        <div class="hero-head mt-6" data-aos="zoom-out-up">
+            <div class="container has-text-centered">
+                <h1 class="title is-1">Comentários</h1>
             </div>
         </div>
-    </div>
-    <div class="hero-body" data-aos="zoom-out-up">
-        <div class="container">
-            <div class="pictures">
-                <figure class="image is-16by9 is-centered">
-                    <img src="{% static 'images/gallery/1.jpg'  %}">
-                </figure>
-                <figure class="image is-16by9 is-centered">
-                    <img src="{% static 'images/gallery/2.jpg'  %}">
-                </figure>
-                <figure class="image is-16by9 is-centered">
-                    <img src="{% static 'images/gallery/3.jpg'  %}">
-                </figure>
-                <figure class="image is-16by9 is-centered">
-                    <img src="{% static 'images/gallery/4.jpg'  %}">
-                </figure>
-                <figure class="image is-16by9 is-centered">
-                    <img src="{% static 'images/gallery/5.jpg'  %}">
-                </figure>
-                <figure class="image is-16by9 is-centered">
-                    <img src="{% static 'images/gallery/6.jpg'  %}">
-                </figure>
-                <figure class="image is-16by9 is-centered">
-                    <img src="{% static 'images/gallery/7.jpg'  %}">
-                </figure>
-                <figure class="image is-16by9 is-centered">
-                    <img src="{% static 'images/gallery/8.jpg'  %}">
-                </figure>
-                <figure class="image is-16by9 is-centered">
-                    <img src="{% static 'images/gallery/9.jpg'  %}">
-                </figure>
-                <figure class="image is-16by9 is-centered">
-                    <img src="{% static 'images/gallery/10.jpg'  %}">
-                </figure>
-                <figure class="image is-16by9 is-centered">
-                    <img src="{% static 'images/gallery/11.jpg'  %}">
-                </figure>
-                <figure class="image is-16by9 is-centered">
-                    <img src="{% static 'images/gallery/12.jpg'  %}">
-                </figure>
-            </div>
-            <div class="videos is-hidden has-text-centered">
-                <figure class="image is-16by9">
-                    <iframe class="has-ratio" width="520" height="360" src="https://www.youtube.com/embed/z0_GrL34o4E"
-                            frameborder="0"
-                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen>
-                    </iframe>
-                </figure>
-                <figure class="image is-16by9">
-                    <iframe class="has-ratio" width="520" height="360" src="https://www.youtube.com/embed/VTyu4dtwRI8"
-                            frameborder="0"
-                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen>
-                    </iframe>
-                </figure>
-                <figure class="image is-16by9">
-                    <iframe class="has-ratio" width="520" height="360" src="https://www.youtube.com/embed/Z4IyDrVkwjk"
-                            frameborder="0"
-                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen>
-                    </iframe>
-                </figure>
-                <figure class="image is-16by9">
-                    <iframe class="has-ratio" width="520" height="360" src="https://www.youtube.com/embed/LIbQGgNEeYY"
-                            frameborder="0"
-                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen>
-                    </iframe>
-                </figure>
-            </div>
-            <p class="mt-6 has-text-centered is-hidden" id="moremedia"><a target="_blank" rel="noopener noreferrer"
-                                                                          href="https://www.youtube.com/mariaceciliasantospersonaltrainer">
-                Mais</a></p>
-        </div>
-    </div>
-</section>
+        <div class="hero-body" data-aos="zoom-out-up">
+            <div class="container is-centered">
+                <div class="tile is-ancestor">
+                    <div class="tile is-vertical is-12">
+                        <div class="tile">
+                            <div class="tile is-parent is-vertical">
+                                <article class="tile is-child box" data-aos="fade-right">
+                                    <p class="title has-text-info">Rodrigo</p>
+                                    <p>Simplesmente a melhor personal que vc pode ter!! Dinâmica,
+                                        compreensiva, desafiadora...</p>
+                                </article>
+                                <article class="tile is-child box" data-aos="fade-right">
+                                    <p class="title has-text-info">Fabiana</p>
+                                    <p>Amoooo ela é as aulas dela , chamo de prof alegria , ela tem uma energia incrível
+                                        ,um
+                                        animo que eu so queria a metade kkk</p>
+                                </article>
+                            </div>
+                            <div class="tile is-parent">
+                                <article class="tile is-child box" data-aos="fade-left">
+                                    <p class="title has-text-info">Marlene</p>
+                                    <p>Melhor PT de sempre !!
+                                        Desde o primeiro dia que percebi que estava com pessoa certa,para me ajudar no
+                                        que
+                                        precisava.
+                                        Foi com a força dela e motivação que hoje vejo resultados tanto físicos como
+                                        psicológicos. Fez de mim uma rapariga com mais confiança e com mais vontade de
+                                        atingir os meus objetivos !!
+                                        Atitude, simpatia, motivação, amiga , palavras que a definem ..
 
-<section class="hero" id="reviews">
-    <div class="hero-head mt-6" data-aos="zoom-out-up">
-        <div class="container has-text-centered">
-            <h1 class="title is-1">Comentários</h1>
-        </div>
-    </div>
-    <div class="hero-body" data-aos="zoom-out-up">
-        <div class="container is-centered">
-            <div class="tile is-ancestor">
-                <div class="tile is-vertical is-12">
-                    <div class="tile">
-                        <div class="tile is-parent is-vertical">
-                            <article class="tile is-child box" data-aos="fade-right">
-                                <p class="title has-text-info">Rodrigo</p>
-                                <p>Simplesmente a melhor personal que vc pode ter!! Dinâmica,
-                                    compreensiva, desafiadora...</p>
-                            </article>
-                            <article class="tile is-child box" data-aos="fade-right">
-                                <p class="title has-text-info">Fabiana</p>
-                                <p>Amoooo ela é as aulas dela , chamo de prof alegria , ela tem uma energia incrível
-                                    ,um
-                                    animo que eu so queria a metade kkk</p></article>
+                                        Muitos obrigada à MINHA PT</p>
+                                </article>
+                            </div>
                         </div>
                         <div class="tile is-parent">
-                            <article class="tile is-child box" data-aos="fade-left">
-                                <p class="title has-text-info">Marlene</p>
-                                <p>Melhor PT de sempre !!
-                                    Desde o primeiro dia que percebi que estava com pessoa certa,para me ajudar no
-                                    que
-                                    precisava.
-                                    Foi com a força dela e motivação que hoje vejo resultados tanto físicos como
-                                    psicológicos. Fez de mim uma rapariga com mais confiança e com mais vontade de
-                                    atingir os meus objetivos !!
-                                    Atitude, simpatia, motivação, amiga , palavras que a definem ..
-
-                                    Muitos obrigada à MINHA PT</p>
+                            <article class="tile is-child box" data-aos="fade-up">
+                                <p class="title has-text-info">Jorge Humberto</p>
+                                <p>Super, Recomendo.
+                                    Além de ser uma excelente professora com um treino muito adaptado ás suas
+                                    necessidades, é
+                                    uma pessoa
+                                    incrível que vai agradecer conhecer.
+                                    Acreditem, nas mãos da Prof. Cecília a sua forma física em pouco tempo vê resultados
+                                    e
+                                    agradece. J. Teles. [aluno da Prof. à vários anos]</p>
                             </article>
                         </div>
                     </div>
-                    <div class="tile is-parent">
-                        <article class="tile is-child box" data-aos="fade-up">
-                            <p class="title has-text-info">Jorge Humberto</p>
-                            <p>Super, Recomendo.
-                                Além de ser uma excelente professora com um treino muito adaptado ás suas
-                                necessidades, é
-                                uma pessoa
-                                incrível que vai agradecer conhecer.
-                                Acreditem, nas mãos da Prof. Cecília a sua forma física em pouco tempo vê resultados
-                                e
-                                agradece. J. Teles. [aluno da Prof. à vários anos]</p>
-                        </article>
-                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<section class="hero" id="bookings">
-    <div class="hero-head mt-6">
-        <div class="container has-text-centered" data-aos="fade-down-right">
-            <h1 class="title is-1">Marcações</h1>
+    <section class="hero" id="bookings">
+        <div class="hero-head mt-6">
+            <div class="container has-text-centered" data-aos="fade-down-right">
+                <h1 class="title is-1">Marcações</h1>
+            </div>
         </div>
-    </div>
-    <div class="hero-body">
-        <div class="container">
-            <div class="columns is-vcentered">
-                <div class="column is-half">
-                    <div class="container has-text-centered" data-aos="fade-right">
-                        <header class="title mb-6">Marca um treino</header>
-                        <a class="button is-large" target="_blank" rel="noopener noreferrer"
-                           href="https://www.superprof.pt/personal-trainer-licenciada-com-anos-experiencia-treinos-personalizados-line.html"><img
-                                src="https://cdn.superprof.com/style/images/logo_sp_pinkV3.svg"></a>
-                    </div>
-                </div>
-                <div class="column" data-aos="fade-left">
-                    <div class="tile is-parent">
-                        <article class="tile is-child notification">
-                            <div class="content">
-                                <header class="title has-text-centered mb-6">Deixa uma mensagem</header>
-                                <form action="" method="post">{% csrf_token %}
-                                    <div class="field">
-                                        <label class="label">Nome *</label>
-                                        <div class="control">
-                                            <input class="input is-info" id="namefield" name="name" type="text" maxlength="50"
-                                                   required>
-                                        </div>
-                                    </div>
-                                    <div class="field">
-                                        <label class="label">Email *</label>
-                                        <div class="control">
-                                            <input class="input is-info" id="emailfield" name="email" type="email" maxlength="50"
-                                                   required>
-                                        </div>
-                                        <p class="help is-danger is-hidden" id="invalidEmail">Este email é inválido</p>
-                                    </div>
-                                    <div class="field">
-                                        <label class="label">Mensagem *</label>
-                                        <div class="control">
-                                                <textarea class="textarea is-info" id="messagefield" name="message" maxlength="500"
-                                                          required></textarea>
-                                        </div>
-                                    </div>
-                                    <p id="formWarning">Campos com * são necessários</p>
-                                    <div class="field is-grouped">
-                                        <div class="control">
-                                            <button id="submit" type="submit" class="button is-link">
-                                                Enviar
-                                            </button>
-                                        </div>
-                                    </div>
-                                </form>
+        <div class="hero-body">
+            <div class="container">
+                <div class="columns is-vcentered">
+                    <div class="column is-half">
+                        <div class="container has-text-centered" data-aos="fade-right">
+                            <header class="title mb-6">Marca um treino</header>
+                            <div class="notification is-danger">
+                                Devido ao Covid-19, apenas os treinos online estão disponíveis.
                             </div>
-                        </article>
+                            <table class="table is-hoverable is-fullwidth has-text-centered">
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th>Em ginásio</th>
+                                        <th>Em casa do aluno</th>
+                                        <th>Online</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th>1 hora</th>
+                                        <th>Indisponível</th>
+                                        <th>Indisponível</th>
+                                        <th>20€</th>
+                                    </tr>
+                                    <tr>
+                                        <th>5 horas</th>
+                                        <th>Indisponível</th>
+                                        <th>Indisponível</th>
+                                        <th>100€</th>
+                                    </tr>
+                                    <tr>
+                                        <th>10 horas</th>
+                                        <th>Indisponível</th>
+                                        <th>Indisponível</th>
+                                        <th>200€</th>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <a class="button is-large" target="_blank" rel="noopener noreferrer"
+                                href="https://www.superprof.pt/personal-trainer-licenciada-com-anos-experiencia-treinos-personalizados-line.html"><img
+                                    src="https://cdn.superprof.com/style/images/logo_sp_pinkV3.svg"></a>
+                        </div>
+                    </div>
+                    <div class="column" data-aos="fade-left">
+                        <div class="tile is-parent">
+                            <article class="tile is-child notification">
+                                <div class="content">
+                                    <header class="title has-text-centered mb-6">Deixa uma mensagem</header>
+                                    <form action="" method="post">{% csrf_token %}
+                                        <div class="field">
+                                            <label class="label">Nome</label>
+                                            <div class="control">
+                                                <input class="input is-info" id="namefield" name="name" type="text"
+                                                    maxlength="50" required>
+                                            </div>
+                                        </div>
+                                        <div class="field">
+                                            <label class="label">Email</label>
+                                            <div class="control">
+                                                <input class="input is-info" id="emailfield" name="email" type="email"
+                                                    maxlength="50" required>
+                                            </div>
+                                            <p class="help is-danger is-hidden" id="invalidEmail">Este email é inválido
+                                            </p>
+                                        </div>
+                                        <div class="field">
+                                            <label class="label">Mensagem</label>
+                                            <div class="control">
+                                                <textarea class="textarea is-info" id="messagefield" name="message"
+                                                    maxlength="500" required></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="field is-grouped">
+                                            <div class="control">
+                                                <button id="submit" type="submit" class="button is-link">
+                                                    Enviar
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </article>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-{% endblock %}
-<footer class="footer">
-    <div class="content has-text-centered">
-        <p>
-            <i class="fa fa-copyright" aria-hidden="true"></i> 2020 • MARIA CECÍLIA SANTOS • PERSONAL TRAINER
-        </p>
+    <div class="modal" id="modal-gallery">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+            <p class="image">
+                <img src="">
+            </p>
+        </div>
+        <button class="modal-close is-large" aria-label="close"></button>
     </div>
-</footer>
-<a class="button is-large is-invisible is-danger is-active mr-5 mb-5" id="topButton" href="#home" data-aos="fade-up"
-   data-aos-duration="500"><i class="fa fa-arrow-up" aria-hidden="true"></i></a>
-<script src="{% static 'AOS/aos.js' %}"></script>
-<script type="text/javascript" src="{% static 'scripts/script.js' %}"></script>
-<script type="text/javascript" src="{% static 'slick/slick.js' %}"></script>
+
+    {% endblock %}
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <p>
+                <i class="fa fa-copyright" aria-hidden="true"></i> 2020 • MARIA CECÍLIA SANTOS • PERSONAL TRAINER
+            </p>
+        </div>
+    </footer>
+    <a class="button is-large is-invisible is-danger is-active mr-5 mb-5" id="topButton" href="#home" data-aos="fade-up"
+        data-aos-duration="500"><i class="fa fa-arrow-up" aria-hidden="true"></i></a>
+    <script src="{% static 'AOS/aos.js' %}"></script>
+    <script type="text/javascript" src="{% static 'scripts/script.js' %}"></script>
 </body>
+
 </html>

@@ -12,4 +12,4 @@ class Message(models.Model):
     date = models.DateTimeField(default=timezone.now, primary_key=True)
 
     def __str__(self):
-        return str(self.user_email + " - Message: " + self.message[0:50] + " ...")
+        return self.user_email

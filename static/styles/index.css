@@ -12,31 +12,29 @@ body {
 }
 
 #home {
-    /* background: url("/static/images/homepage.png") no-repeat; */
-    background-size: cover;
+    background         : url("/static/images/homep.svg") no-repeat;
+    background-size    : cover;
     background-position: center bottom;
 }
 
 #bookingsbutton {
-    background-color: #0073ec;
+    background-color  : #0073ec;
     -webkit-transition: background-color 0.3s ease-out;
-    -moz-transition: background-color 0.3s ease-out;
-    -o-transition: background-color 0.3s ease-out;
-    transition: background-color 0.3s ease-out;
+    -moz-transition   : background-color 0.3s ease-out;
+    -o-transition     : background-color 0.3s ease-out;
+    transition        : background-color 0.3s ease-out;
 }
 
 #about {
-    background: url("/static/images/gray-right.png") no-repeat;
+    background           : url("/static/images/gray-right.png") no-repeat;
     background-position-x: center;
     background-position-y: top;
-    background-size: cover;
-    background-repeat-x: no-repeat;
-    background-repeat-y: no-repeat;
+    background-size      : cover;
     background-attachment: initial;
-    background-origin: initial;
-    background-clip: initial;
-    background-color: white;
-    background-size: cover;
+    background-origin    : initial;
+    background-clip      : initial;
+    background-color     : white;
+    background-size      : cover;
 }
 
 
@@ -45,13 +43,13 @@ body {
 }
 
 .main-video {
-    width: 700px;
+    width        : 700px;
     border-radius: 20px;
 }
 
 #mainimg {
     cursor: default;
-    width: 750px;
+    width : 600px;
 }
 
 .mainleft {
@@ -59,87 +57,187 @@ body {
 }
 
 .maintitle {
-    font-size: 70px;
+    font-size     : 70px;
     letter-spacing: 2px;
-    /*text-shadow: 1px 1px hsl(0, 0%, 21%);*/
+    /*text-shadow : 1px 1px hsl(0, 0%, 21%);*/
 }
 
 #subtitlejob {
     letter-spacing: 6px;
-    /*text-shadow: 1px 1px hsl(0, 0%, 21%);*/
+    /*text-shadow : 1px 1px hsl(0, 0%, 21%);*/
 }
 
 #subtitlelink {
-    letter-spacing: 6px;
-    color: hsl(0, 0%, 21%);
+    letter-spacing  : 6px;
+    color           : hsl(0, 0%, 21%);
     background-color: hsl(0, 0%, 96%);
-    font-size: 30px;
-    border: solid;
-    border-color: hsl(0, 0%, 96%);
-    border-radius: 50px;
-    margin: 0px 150px 0px 150px;
-    text-transform: uppercase;
+    font-size       : 30px;
+    border          : solid;
+    border-color    : hsl(0, 0%, 96%);
+    border-radius   : 50px;
+    margin          : 0px 150px 0px 150px;
+    text-transform  : uppercase;
 }
 
 #trainbutton {
-    background-color: #0073ec;
-    padding: 25px 60px;
-    font-size: 15px;
+    background-color  : #0073ec;
+    padding           : 25px 60px;
+    font-size         : 15px;
     -webkit-transition: background-color 0.3s ease-out;
-    -moz-transition: background-color 0.3s ease-out;
-    -o-transition: background-color 0.3s ease-out;
-    transition: background-color 0.3s ease-out;
+    -moz-transition   : background-color 0.3s ease-out;
+    -o-transition     : background-color 0.3s ease-out;
+    transition        : background-color 0.3s ease-out;
 }
 
 section {
     background-color: hsl(0, 0%, 96%);
-    font-size: large;
+    font-size       : large;
 }
 
 .author {
-    float:right;
+    float : right;
     bottom: 0;
 }
 
-.review{
+.review {
     line-height: 30px;
 }
 
 .gradient {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
+    position  : absolute;
+    right     : 0;
+    bottom    : 0;
+    min-width : 100%;
     min-height: 100%;
-    background: rgb(0,0,0);
-    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 94%, rgba(0,0,0,0) 100%);
-    overflow: hidden;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 94%, rgba(0, 0, 0, 0) 100%);
+    overflow  : hidden;
 }
 
 .navbar-item:hover {
-    background-color: transparent !important;
-    text-decoration: underline;
-    color: white !important;
+    background-color  : transparent !important;
+    -webkit-transition: font-size 0.3s ease-out;
+    -moz-transition   : font-size 0.3s ease-out;
+    -o-transition     : font-size 0.3s ease-out;
+    transition        : font-size 0.3s ease-out;
+    font-size         : larger;
 }
 
-#trainbutton:hover, #bookingsbutton:hover {
-     background-color: hsl(217, 71%, 45%);
+#trainbutton:hover,
+#bookingsbutton:hover {
+    background-color: hsl(217, 71%, 45%);
 }
 
 #ig {
-    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    background             : radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
     -webkit-background-clip: text;
-    background-clip: text;
+    background-clip        : text;
     -webkit-text-fill-color: transparent;
-    font-size: 50px;
+    font-size              : 50px;
 }
 
 #topButton {
     position: fixed;
-    right: 0;
-    bottom: 0;
+    right   : 0;
+    bottom  : 0;
 }
 
 #formWarning {
     font-size: 15px;
+}
+
+/* scollbar */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: grey transparent;
+}
+
+*::-webkit-scrollbar {
+    width: 5px;
+}
+
+*::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: grey;
+    border-radius   : 20px;
+    border          : 5px solid transparent;
+}
+
+/* accordion */
+details {
+    width        : 75%;
+    min-height   : 5px;
+    max-width    : 700px;
+    padding      : 45px 70px 45px 45px;
+    margin       : 0 auto;
+    position     : relative;
+    font-size    : 22px;
+    border       : 1px solid rgba(0, 0, 0, .1);
+    border-radius: 15px;
+    box-sizing   : border-box;
+    transition   : all .3s;
+}
+
+details+details {
+    margin-top: 20px;
+}
+
+details[open] {
+    min-height      : 50px;
+    background-color: #f6f7f8;
+    box-shadow      : 2px 2px 20px rgba(0, 0, 0, .2);
+}
+
+details p {
+    color      : #96999d;
+    font-weight: 300;
+}
+
+summary {
+    display        : flex;
+    justify-content: space-between;
+    align-items    : center;
+    font-weight    : 500;
+    cursor         : pointer;
+}
+
+summary:focus {
+    outline: none;
+}
+
+summary:focus::after {
+    content   : "";
+    height    : 100%;
+    width     : 100%;
+    display   : block;
+    position  : absolute;
+    top       : 0;
+    left      : 0;
+    box-shadow: 0 0 0 5px transparent;
+}
+
+summary::-webkit-details-marker {
+    display: none
+}
+
+.control-icon {
+    fill          : hsl(217, 71%, 45%);
+    transition    : .3s ease;
+    pointer-events: none;
+}
+
+.control-icon-close {
+    display: none;
+}
+
+details[open] .control-icon-close {
+    display   : initial;
+    transition: .3s ease;
+}
+
+details[open] .control-icon-expand {
+    display: none;
 }
